@@ -110,6 +110,13 @@ header {
 .img-box {
     background: var(--gray-card);
     border-radius: 12px;
+    overflow: hidden;
+}
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .img-large {
@@ -134,6 +141,13 @@ header {
     height: 250px;
     border-radius: 12px;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* NEWS LAYOUT (ASIMÉTRICO) */
@@ -147,6 +161,12 @@ header {
     background: var(--gray-card);
     height: 350px;
     border-radius: 12px;
+    overflow: hidden;
+}
+.news-img-big img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 
 .news-item {
@@ -161,7 +181,15 @@ header {
     background: var(--gray-card);
     border-radius: 8px;
     flex-shrink: 0;
+    overflow: hidden;
 }
+.item-img img {
+    width: 100%;       /* Obliga a la imagen a medir 80px de ancho */
+    height: 100%;      /* Obliga a la imagen a medir 80px de alto */
+    object-fit: cover; /* Recorta los bordes para que no se vea estirada */
+    display: block;
+}
+
 
 /* NEWSLETTER */
 .newsletter-box {
