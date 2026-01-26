@@ -4,71 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | FrikiStore</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <header>
-        <div class="container nav-flex">
-            <div class="logo">FRIKISTORE</div>
-            <nav class="main-nav">
-                <a href="../ProyectoLenguaje.html">Inicio</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="#">Ropa</a>
-                <a href="#">Preventas</a>
-                <a href="#">Ofertas</a>
-            </nav>
-            <div class="nav-icons">
-                <span>🔍</span>
-                <button class="btn-dark">Sign In</button>
-                <span class="menu-mobile">☰</span>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">FRIKISTORE</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ropa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Preventas</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning" href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+                    <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
+                    <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="container" style="padding: 40px 0;">
-            <h1>Contacto</h1>
-            <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name">
+    <main class="py-5 flex-grow-1">
+        <section class="container bg-light p-5 rounded-4 shadow-sm">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-3 text-dark">¿Tienes alguna pregunta?</h1>
+                    <p class="lead text-muted">¡Contáctanos! Nuestro equipo de expertos en coleccionismo te responderá en menos de 24 horas.</p>
+                    <div class="mt-4">
+                        <p><i class="bi bi-geo-alt-fill text-warning me-2"></i> Calle Friki 123, Madrid</p>
+                        <p><i class="bi bi-envelope-fill text-warning me-2"></i> soporte@frikistore.es</p>
+                        <p><i class="bi bi-telephone-fill text-warning me-2"></i> +34 900 123 456</p>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email">
+                
+                <div class="col-lg-6">
+                    <form class="p-4 bg-white rounded-3 shadow-sm border">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Nombre</label>
+                            <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Tu nombre real o de héroe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control border-0 bg-light" id="email" placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Mensaje</label>
+                            <textarea class="form-control border-0 bg-light" id="message" rows="4" placeholder="¿En qué podemos ayudarte hoy?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow-sm">Enviar Mensaje</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <div class="logo">FRIKISTORE</div>
-                <p>Síguenos en redes:</p>
-                <div class="socials">f t i y</div>
+    <footer class="bg-black text-white pt-5 pb-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">FRIKISTORE</h5>
+                    <p>Tu tienda de confianza para coleccionismo y cultura geek. Importación directa y preventas exclusivas.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nosotros</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Tiendas</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">Envíos</a></p>
+                    <p><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Ayuda</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Soporte</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">FAQ</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Síguenos</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Sobre nosotros</h4>
-                <a href="#">Tiendas</a>
-                <a href="#">Envíos</a>
-                <a href="#">Contacto</a>
-            </div>
-            <div class="footer-links">
-                <h4>Ayuda</h4>
-                <a href="#">Soporte</a>
-                <a href="#">Devoluciones</a>
-                <a href="#">FAQ</a>
+            <hr class="mt-5 mb-4 border-secondary border-opacity-50">
+            <div class="text-center text-secondary pb-2">
+                <small>© 2026 Frikistore Team | Luis, Izan, Alvaro</small>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
