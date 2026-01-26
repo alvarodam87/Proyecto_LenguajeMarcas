@@ -235,6 +235,22 @@ footer {
     margin: 10px 0;
 }
 
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.socials i {
+    font-size: 24px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.socials i:hover {
+    color: var(--accent);
+}
+
 /* ===========================================
    MEDIA QUERIES (RESPONSIVE)
    =========================================== */
