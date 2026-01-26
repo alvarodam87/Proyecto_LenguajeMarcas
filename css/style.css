@@ -106,6 +106,40 @@ footer a:hover {
     color: var(--primary-color);
 }
 
+.hero-content h1 {
+    letter-spacing: -2px; /* Estética moderna y compacta */
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-dark); /* Color de fondo mientras carga la imagen */
+    transition: var(--transition);
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crucial: evita que las fotos de personajes se estiren */
+    filter: brightness(0.9);
+    transition: var(--transition);
+}
+
+/* Efecto hover profesional para incentivar el click */
+.img-box:hover img {
+    filter: brightness(1.1);
+    transform: scale(1.08);
+}
+
+/* Ajuste de alturas responsivas */
+.img-large { height: 500px; }
+.img-small { height: 240px; }
+
+@media (max-width: 991px) {
+    .img-large { height: 350px; }
+    .img-small { height: 165px; }
+}
+
 /* 8. AJUSTES RESPONSIVOS EXTRA */
 @media (max-width: 768px) {
     .hero-content {

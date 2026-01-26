@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | FrikiStore</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="../index.html">FRIKISTORE</a>
             
@@ -26,23 +29,23 @@
                     <li class="nav-item"><a class="nav-link active text-warning" href="contacto.html">Contacto</a></li>
                 </ul>
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
-                    <span class="text-white cursor-pointer">🔍</span>
+                    <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
                     <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="py-5">
+    <main class="py-5 flex-grow-1">
         <section class="container bg-light p-5 rounded-4 shadow-sm">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-3">¿Tienes alguna pregunta?</h1>
+                    <h1 class="display-4 fw-bold mb-3 text-dark">¿Tienes alguna pregunta?</h1>
                     <p class="lead text-muted">¡Contáctanos! Nuestro equipo de expertos en coleccionismo te responderá en menos de 24 horas.</p>
                     <div class="mt-4">
-                        <p>📍 Calle Friki 123, Madrid</p>
-                        <p>📧 soporte@frikistore.es</p>
-                        <p>📞 +34 900 123 456</p>
+                        <p><i class="bi bi-geo-alt-fill text-warning me-2"></i> Calle Friki 123, Madrid</p>
+                        <p><i class="bi bi-envelope-fill text-warning me-2"></i> soporte@frikistore.es</p>
+                        <p><i class="bi bi-telephone-fill text-warning me-2"></i> +34 900 123 456</p>
                     </div>
                 </div>
                 
@@ -50,17 +53,17 @@
                     <form class="p-4 bg-white rounded-3 shadow-sm border">
                         <div class="mb-3">
                             <label for="name" class="form-label fw-bold">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre real o de héroe">
+                            <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Tu nombre real o de héroe" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                            <input type="email" class="form-control border-0 bg-light" id="email" placeholder="nombre@ejemplo.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label fw-bold">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="¿En qué podemos ayudarte hoy?"></textarea>
+                            <textarea class="form-control border-0 bg-light" id="message" rows="4" placeholder="¿En qué podemos ayudarte hoy?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow-sm">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -91,12 +94,15 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold text-warning">Síguenos</h5>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
-                        <span>f</span> <span>t</span> <span>i</span> <span>y</span>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="mt-5 mb-4 border-secondary">
-            <div class="text-center text-secondary">
+            <hr class="mt-5 mb-4 border-secondary border-opacity-50">
+            <div class="text-center text-secondary pb-2">
                 <small>© 2026 Frikistore Team | Luis, Izan, Alvaro</small>
             </div>
         </div>
