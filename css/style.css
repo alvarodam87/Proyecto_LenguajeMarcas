@@ -70,6 +70,15 @@ body {
     display: inline-block; 
 }
 /* 5. PRODUCT CARDS */
+body {
+    background-color: #e5e5e5; /* o cualquier gris claro */
+}
+.shadow-4 {
+    box-shadow:
+        inset -23px -23px 45px rgba(255, 255, 255, 0.8),
+        0 8px 20px rgba(0, 0, 0, 0.2); /* sombra externa opcional */
+}
+
 .hover-zoom {
     transition: var(--transition);
     display: block;
