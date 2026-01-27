@@ -63,7 +63,12 @@ body {
     height: 200px;
     object-fit: contain;
 }
-
+.section-title { 
+    border-bottom: 2px 
+    solid var(--primary-color); 
+    padding-bottom: 10px; 
+    display: inline-block; 
+}
 /* 5. PRODUCT CARDS */
 .hover-zoom {
     transition: var(--transition);
@@ -140,7 +145,7 @@ footer a:hover {
     letter-spacing: -2px;
 }
 
-/* ⭐⭐⭐  CTA SECTION (CTA ENCIMA DEL FONDO LEGO) ⭐⭐⭐ */
+/* ⭐⭐⭐ CTA SECTION ⭐⭐⭐ */
 .cta-container {
     position: relative;
     width: 100%;
@@ -149,18 +154,7 @@ footer a:hover {
     font-family: 'Arial Black', sans-serif;
 }
 
-/* Imagen de fondo */
-.cta-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* CTA superpuesto */
+/* CTA con fondo LEGO */
 .cta-card {
     position: absolute;
     top: 50%;
@@ -168,7 +162,7 @@ footer a:hover {
     transform: translate(-50%, -50%);
     z-index: 2;
 
-    background: white;
+    background: url('../img/fondo-lego.png.png') center/cover no-repeat;
     padding: 30px;
     border: 8px solid #cc0000;
     box-shadow: 8px 8px 0px #333;
