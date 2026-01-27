@@ -59,6 +59,12 @@ body {
     height: 210px;
 }
 
+/* Logo images in top-licencias section */
+.top-licencias img {
+    height: 200px;
+    object-fit: contain;
+}
+
 /* 5. TOP LICENCIAS (Tarjetas de productos) */
 .hover-zoom {
     transition: var(--transition);
