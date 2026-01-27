@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #ffc107;    /* Amarillo Shonen (Naruto/Dragon Ball) */
-    --bg-dark: #121212;         /* Negro profundo para modo oscuro */
+    --primary-color: #ffc107;
+    --bg-dark: #121212;
     --text-light: #f8f9fa;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;
@@ -9,10 +9,10 @@
 /* 2. AJUSTES GENERALES */
 body {
     background-color: #ffffff;
-    overflow-x: hidden; /* Evita scroll horizontal innecesario */
+    overflow-x: hidden;
 }
 
-/* 3. NAVBAR (Tu parte: Luis) */
+/* 3. NAVBAR */
 .navbar {
     border-bottom: 2px solid var(--primary-color);
 }
@@ -32,40 +32,39 @@ body {
     transform: translateY(-2px);
 }
 
-/* 4. HERO SECTION: Manejo de imágenes */
+/* 4. HERO SECTION */
 .img-box {
     background-color: #eee;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
+    position: relative;
+    transition: var(--transition);
 }
 
 .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que las fotos de personajes se estiren */
+    object-fit: cover;
+    filter: brightness(0.9);
     transition: var(--transition);
 }
 
 .img-box:hover img {
-    transform: scale(1.05); /* Efecto zoom suave al pasar el ratón */
+    filter: brightness(1.1);
+    transform: scale(1.08);
 }
 
-.img-large {
-    height: 450px;
-}
+.img-large { height: 450px; }
+.img-small { height: 210px; }
 
-.img-small {
-    height: 210px;
-}
-
-/* Logo images in top-licencias section */
+/* Logo images */
 .top-licencias img {
     height: 200px;
     object-fit: contain;
 }
 
-/* 5. TOP LICENCIAS (Tarjetas de productos) */
+/* 5. PRODUCT CARDS */
 .hover-zoom {
     transition: var(--transition);
     display: block;
@@ -91,7 +90,7 @@ body {
     border-radius: 8px;
 }
 
-/* 5.5 FEATURED PRODUCTS SECTION */
+/* 5.5 FEATURED PRODUCTS */
 .product-card {
     transition: var(--transition);
     border-radius: 12px;
@@ -109,14 +108,12 @@ body {
     transition: var(--transition);
 }
 
-
-
-/* 6. NEWSLETTER: Estilo moderno */
+/* 6. NEWSLETTER */
 .newsletter-box {
     border: 1px solid rgba(255, 193, 7, 0.3);
 }
 
-/* 7. FOOTER (Tu parte: Luis) */
+/* 7. FOOTER */
 footer {
     border-top: 3px solid var(--primary-color);
 }
@@ -127,7 +124,7 @@ footer h5 {
 
 footer a:hover {
     color: var(--primary-color) !important;
-    padding-left: 5px; /* Pequeña animación de desplazamiento */
+    padding-left: 5px;
 }
 
 .socials span {
@@ -135,126 +132,82 @@ footer a:hover {
     transition: var(--transition);
 }
 
-
-.card:hover .hover-zoom {
-    transform: scale(1.1);
-}
-
-.card {
-    border: none;
-    transition: var(--transition);
-}
-
-.card:hover {
-    box-shadow: var(--card-shadow) !important;
-    transform: translateY(-5px);
-}
-
-/* 6. NEWSLETTER: Estilo moderno */
-.newsletter-box {
-    border: 1px solid rgba(255, 193, 7, 0.3);
-}
-
-/* 7. FOOTER (Tu parte: Luis) */
-footer {
-    border-top: 3px solid var(--primary-color);
-}
-
-footer h5 {
-    letter-spacing: 1.5px;
-}
-
-footer a:hover {
-    color: var(--primary-color) !important;
-    padding-left: 5px; /* Pequeña animación de desplazamiento */
-}
-
-.socials span {
-    cursor: pointer;
-    transition: var(--transition);
-}
-
- b90fcee848b8d815d546c1a1cb53db875ebdcb7b
 .socials span:hover {
     color: var(--primary-color);
 }
 
 .hero-content h1 {
-    letter-spacing: -2px; /* Estética moderna y compacta */
+    letter-spacing: -2px;
 }
 
-.img-box {
+/* ⭐⭐⭐  CTA SECTION (CTA ENCIMA DEL FONDO LEGO) ⭐⭐⭐ */
+.cta-container {
     position: relative;
+    width: 100%;
+    height: 450px;
     overflow: hidden;
-    background-color: var(--bg-dark); /* Color de fondo mientras carga la imagen */
-    transition: var(--transition);
+    font-family: 'Arial Black', sans-serif;
 }
 
-.img-box img {
+/* Imagen de fondo */
+.cta-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crucial: evita que las fotos de personajes se estiren */
-    filter: brightness(0.9);
-    transition: var(--transition);
+    object-fit: cover;
+    z-index: 1;
 }
 
-/* Efecto hover profesional para incentivar el click */
-.img-box:hover img {
-    filter: brightness(1.1);
-    transform: scale(1.08);
-}
-.cta-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  background: url('tu-imagen-lego.jpg') no-repeat center center;
-  background-size: cover;
-  font-family: 'Arial Black', sans-serif;
-}
-
+/* CTA superpuesto */
 .cta-card {
-  background: white;
-  padding: 30px;
-  border: 8px solid #cc0000; /* Rojo Pokebola */
-  box-shadow: 8px 8px 0px #333; /* Efecto bloque */
-  text-align: center;
-  max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    background: white;
+    padding: 30px;
+    border: 8px solid #cc0000;
+    box-shadow: 8px 8px 0px #333;
+    text-align: center;
+    max-width: 500px;
 }
 
 .cta-card h2 {
-  color: #ffcb05; /* Amarillo Pokémon */
-  text-shadow: 3px 3px 0px #3d7dca; /* Azul Pokémon */
-  font-size: 2rem;
-  margin-bottom: 20px;
+    color: #ffcb05;
+    text-shadow: 3px 3px 0px #3d7dca;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 input[type="email"] {
-  padding: 12px;
-  border: 4px solid #333;
-  width: 60%;
-  font-weight: bold;
+    padding: 12px;
+    border: 4px solid #333;
+    width: 60%;
+    font-weight: bold;
 }
 
 button {
-  padding: 12px 25px;
-  background-color: #cc0000;
-  color: white;
-  border: 4px solid #333;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 4px 4px 0px #333;
-  transition: 0.2s;
+    padding: 12px 25px;
+    background-color: #cc0000;
+    color: white;
+    border: 4px solid #333;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px #333;
+    transition: 0.2s;
 }
 
 button:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px #333;
-  background-color: #ff0000;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #333;
+    background-color: #ff0000;
 }
 
-
-/* Ajuste de alturas responsivas */
+/* Ajustes responsivos */
 .img-large { height: 500px; }
 .img-small { height: 240px; }
 
@@ -263,13 +216,7 @@ button:hover {
     .img-small { height: 165px; }
 }
 
-/* 8. AJUSTES RESPONSIVOS EXTRA */
 @media (max-width: 768px) {
-    .hero-content {
-        text-align: center;
-    }
-    
-    .img-large {
-        height: 300px;
-    }
+    .hero-content { text-align: center; }
+    .img-large { height: 300px; }
 }
