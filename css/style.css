@@ -103,6 +103,17 @@ body {
     transition: var(--transition);
 }
 
+/* Centrar imágenes en la sección de productos destacados */
+.productos-destacados .card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
 .product-card .badge {
     font-size: 0.75rem;
     font-weight: 600;
