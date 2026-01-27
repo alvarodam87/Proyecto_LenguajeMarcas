@@ -146,8 +146,6 @@ footer a:hover {
     transition: var(--transition);
 }
 
-=======
-}
 
 .card:hover .hover-zoom {
     transform: scale(1.1);
@@ -187,7 +185,7 @@ footer a:hover {
     transition: var(--transition);
 }
 
->>>>>>> b90fcee848b8d815d546c1a1cb53db875ebdcb7b
+ b90fcee848b8d815d546c1a1cb53db875ebdcb7b
 .socials span:hover {
     color: var(--primary-color);
 }
