@@ -103,15 +103,12 @@ body {
     transition: var(--transition);
 }
 
-/* Centrar imágenes en la sección de productos destacados */
+/* Ajustar imágenes en la sección de productos destacados */
 .productos-destacados .card-img-top {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 250px;
     width: 100%;
-    object-fit: contain;
-    background-color: #f8f9fa;
-    padding: 20px 0;
+    object-fit: cover;
+    display: block;
 }
 
 .product-card .badge {
