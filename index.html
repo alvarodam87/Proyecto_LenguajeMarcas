@@ -131,7 +131,7 @@
 
                 <article class="col">
                     <div class="card border-0 shadow-sm h-100 overflow-hidden">
-                        <img src="img/figuralink.jpg" class="card-img-top" alt="Figura Zelda" style="height: 250px; object-fit: cover;">
+                        <img src="img/figurazelda2.jpg" class="card-img-top" alt="Figura Zelda" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">Figura Link Breath of Wild</h5>
                             <p class="card-text text-secondary small">Coleccionable de Link con accesorios originales.</p>
@@ -187,12 +187,15 @@
             </div>
         </section>
 
+                                    <!-- ====== CAROUSEL ======-->
+
         <section id="novedades" class="container py-5">
             <h2 class="mb-4 fw-bold text-center">Eventos y Testimonios</h2>
             <div class="row g-4">
                 <div class="col-lg-8">
                     <div id="newsCarousel" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
                         <div class="carousel-inner">
+                            
                             
                             <div class="carousel-item active">
                                 <img src="img/comiccon2.png" class="d-block w-100" alt="Novedad 1" style="height: 450px; object-fit: cover;">
@@ -230,6 +233,8 @@
                     </div>
                 </div>
 
+                
+
                 <div class="col-lg-4">
                     <div class="d-flex flex-column gap-3">
                         <h4 class="h5 fw-bold mb-2">Lo que dicen nuestros Nakamas</h4>
@@ -259,6 +264,16 @@
                             </div>
                             <p class="small text-muted mt-2 mb-0">"La mejor tienda para comprar ropa de anime en Valencia."</p>
                         </div>
+                        <!-- CTA añadido --> 
+                         <div class="card border-0 shadow-sm p-3 text-center bg-warning">
+    <h6 class="fw-bold mb-2">¿Eres friki de corazón?</h6>
+    <p class="small mb-3">Únete a nuestra comunidad y recibe contenido exclusivo.</p>
+
+    <!-- Aquí va el enlace -->
+    <a href="#newsletter" class="btn btn-dark btn-sm">SUSCRIBIRME</a>
+</div>
+
+
                     </div>
                 </div>
             </div>
@@ -268,14 +283,19 @@
 <!-- CTA SECTION (CTA ENCIMA DEL FONDO LEGO) -->
 
 
-<<div class="cta-container">
+<div class="cta-container">
+    
 
-    <div class="cta-card">
-        <h2>¡Recibe las preventas antes que nadie!</h2>
+    <div class="cta-card">        
+        <span class="cta-tag">EXCLUSIVO PARA FANS</span>
+         <h2>¡Recibe las preventas antes que nadie!</h2>
 
-        <form class="cta-form">
+        <p>Suscríbete a nuestro newsletter y sé el primero en enterarte de las novedades y ofertas especiales.</p>
+            <form id="newsletter" class="cta-form">
+
             <input type="email" placeholder="Tu email friki..." required>
-            <button type="submit">SUSCRIBIRSE</button>
+            <a href="#newsletter" class="btn btn-dark btn-sm">SUSCRIBIRME</a>
+
         </form>
     </div>
 

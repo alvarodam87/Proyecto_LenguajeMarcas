@@ -78,6 +78,11 @@ body {
         inset -23px -23px 45px rgba(255, 255, 255, 0.8),
         0 8px 20px rgba(0, 0, 0, 0.2); /* sombra externa opcional */
 }
+.cta-card {
+    border: 10px solid #cc0000;
+    box-shadow: 10px 10px 0px #333;
+}
+
 
 .hover-zoom {
     transition: var(--transition);
@@ -178,6 +183,19 @@ footer a:hover {
     text-align: center;
     max-width: 500px;
 }
+.cta-tag {
+    background: #ffcb05;
+    color: #333;
+    padding: 5px 12px;
+    font-weight: bold;
+    border: 3px solid #333;
+    box-shadow: 4px 4px 0px #333;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .cta-card h2 {
     color: #ffcb05;
@@ -222,4 +240,20 @@ button:hover {
 @media (max-width: 768px) {
     .hero-content { text-align: center; }
     .img-large { height: 300px; }
+}
+.cta-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-8px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
+.cta-subtext {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
 }
