@@ -3,74 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | FrikiStore</title>
-    
+    <title>Preventas Exclusivas | FrikiStore</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="../index.html">FRIKISTORE</a>
-    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Figuras</a></li>
                     <li class="nav-item"><a class="nav-link" href="ropa.html">Ropa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="preventas.html">Preventas</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning" href="preventas.html">Preventas</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
                     <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
+                    <button class="btn text-white position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#carritoLateral">
+                        <i class="bi bi-cart-fill fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </button>
                     <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="py-5 flex-grow-1">
-        <section class="container bg-light p-5 rounded-4 shadow-sm">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-3 text-dark">¿Tienes alguna pregunta?</h1>
-                    <p class="lead text-muted">¡Contáctanos! Nuestro equipo de expertos en coleccionismo te responderá en menos de 24 horas.</p>
-                    <div class="mt-4">
-                        <p><i class="bi bi-geo-alt-fill text-warning me-2"></i> Calle Friki 123, Madrid</p>
-                        <p><i class="bi bi-envelope-fill text-warning me-2"></i> soporte@frikistore.es</p>
-                        <p><i class="bi bi-telephone-fill text-warning me-2"></i> +34 900 123 456</p>
+    <main class="flex-grow-1 py-5">
+        <section class="container">
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-8 text-center text-md-start">
+                    <h1 class="fw-bold display-5">Próximos <span class="text-warning">Lanzamientos</span></h1>
+                    <p class="text-muted">Asegura tus piezas exclusivas. Importación directa y stock limitado.</p>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select border-0 shadow-sm py-2">
+                        <option selected>Filtrar por llegada</option>
+                        <option>Febrero 2026</option>
+                        <option>Marzo 2026</option>
+                        <option>Abril 2026</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="position-relative">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 z-1 shadow">RESERVA</span>
+                            <img src="../img/fondoMarvel.jpg" class="card-img-top hover-zoom" alt="Marvel Figure" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-1">Estatua Iron Man Mark 85</h6>
+                            <p class="text-muted small mb-2">Marvel Cinematic Universe - Edición Limitada</p>
+                            <div class="alert alert-warning py-1 px-2 small mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>Lanzamiento: Mayo 2026
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="text-warning fw-bold fs-5">89.99€</span>
+                                <button class="btn btn-warning btn-sm rounded-pill px-3 fw-bold shadow-sm">RESERVAR</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <form class="p-4 bg-white rounded-3 shadow-sm border">
-                        <div class="mb-3">
-                            <label for="name" class="form-label fw-bold">Nombre</label>
-                            <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Tu nombre real o de héroe" required>
+                </article>
+
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="position-relative">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 z-1 shadow">RESERVA</span>
+                            <img src="../img/comiccon2.png" class="card-img-top hover-zoom" alt="Comic Con Exclusive" style="height: 250px; object-fit: cover;">
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control border-0 bg-light" id="email" placeholder="nombre@ejemplo.com" required>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-1">Pack Especial Comic-Con 2026</h6>
+                            <p class="text-muted small mb-2">Set de Figuras Exclusivas del Evento</p>
+                            <div class="alert alert-warning py-1 px-2 small mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>Lanzamiento: Julio 2026
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="text-warning fw-bold fs-5">120.00€</span>
+                                <button class="btn btn-warning btn-sm rounded-pill px-3 fw-bold shadow-sm">RESERVAR</button>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label fw-bold">Mensaje</label>
-                            <textarea class="form-control border-0 bg-light" id="message" rows="4" placeholder="¿En qué podemos ayudarte hoy?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow-sm">Enviar Mensaje</button>
-                    </form>
-                </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black text-white pt-5 pb-4 mt-auto">
+        <footer class="bg-black text-white pt-5 pb-4 mt-auto">
         <div class="container text-center text-md-start">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
@@ -108,25 +135,21 @@
         </div>
     </footer>
 
-    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="carritoLateral"
-        aria-labelledby="carritoLabel">
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="carritoLateral" aria-labelledby="carritoLabel">
         <div class="offcanvas-header border-bottom border-secondary">
             <h5 class="offcanvas-title fw-bold text-warning" id="carritoLabel">MI CARRITO NAKAMA</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    
         <div class="offcanvas-body">
             <div class="cart-item d-flex align-items-center gap-3 mb-4 p-2 bg-secondary bg-opacity-25 rounded">
-                <img src="img/figuraluffy.jpg" alt="Luffy" class="rounded shadow-sm"
-                    style="width: 60px; height: 60px; object-fit: cover;">
+                <img src="../img/figuraluffy.jpg" alt="Luffy" class="rounded shadow-sm" style="width: 60px; height: 60px; object-fit: cover;">
                 <div class="flex-grow-1">
-                    <h6 class="mb-0 small fw-bold">Figura Luffy Banpresto</h6>
+                    <h6 class="mb-0 small fw-bold text-truncate">Figura Luffy Banpresto</h6>
                     <p class="mb-0 text-warning small">45.99€</p>
                 </div>
                 <button class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
             </div>
         </div>
-    
         <div class="offcanvas-footer p-3 border-top border-secondary bg-black">
             <div class="d-flex justify-content-between mb-3">
                 <span class="fw-bold">Total:</span>
@@ -136,6 +159,6 @@
         </div>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
