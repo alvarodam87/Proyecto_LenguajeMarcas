@@ -211,7 +211,7 @@ input[type="email"] {
     font-weight: bold;
 }
 
-button {
+btn-lego {
     padding: 12px 25px;
     background-color: #cc0000;
     color: white;
@@ -222,10 +222,37 @@ button {
     transition: 0.2s;
 }
 
-button:hover {
+btn-lego:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px #333;
     background-color: #ff0000;
+}
+
+/* 1. Fondo circular y tamaño de las flechas */
+#newsCarousel .carousel-control-prev-icon,
+#newsCarousel .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+    border-radius: 50%; /* Hace que el fondo sea un círculo perfecto */
+    width: 3.5rem; /* Un poco más grandes */
+    height: 3.5rem;
+    background-size: 50%; /* Ajusta el tamaño de la flecha dentro del círculo */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* 2. Efecto al pasar el ratón (Hover) */
+#newsCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+#newsCarousel .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--primary-color); /* Se vuelve amarilla (tu variable de CSS) */
+    filter: invert(1); /* Cambia la flecha blanca a negra para que contraste con el amarillo */
+    transform: scale(1.1); /* Efecto de crecimiento sutil */
+}
+
+.offcanvas {
+    width: 350px !important;
+}
+.offcanvas-footer {
+    position: sticky;
+    bottom: 0;
 }
 
 /* Ajustes responsivos */

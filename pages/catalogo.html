@@ -5,116 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | FrikiStore</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="../index.html">FRIKISTORE</a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active text-warning" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning" href="catalogo.html">Figuras</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Ropa</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Preventas</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
-                    <span class="text-white cursor-pointer">🔍</span>
+                    <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
+                
+                    <button class="btn text-white position-relative" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#carritoLateral">
+                        <i class="bi bi-cart-fill fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                
                     <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
-                </div>
+</div>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow-1 py-5">
         <section class="container">
-            <div class="d-flex justify-content-between align-items-center mb-5">
-                <h1 class="fw-bold">Catálogo de Figuras</h1>
-                <span class="badge bg-dark">124 Productos encontrados</span>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="fw-bold display-5">Catálogo de <span class="text-warning">Figuras</span></h1>
+                    <p class="text-muted">Explora nuestra selección de piezas de importación directa.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-center gap-2 mt-3 mt-md-0">
+                    <select class="form-select w-auto border-0 shadow-sm">
+                        <option selected>Ordenar por</option>
+                        <option value="1">Precio: Menor a Mayor</option>
+                        <option value="2">Novedades</option>
+                    </select>
+                    <button class="btn btn-dark shadow-sm"><i class="bi bi-filter"></i> Filtrar</button>
+                </div>
             </div>
 
-            <div class="row g-4">
-                <article class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-img p-3">
-                            <img src="../img/luffy.jpg" class="img-fluid rounded hover-zoom" alt="Figuras One Piece">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                
+                <article class="col">
+                    <div class="card h-100 shadow-sm border-0 product-card">
+                        <div class="position-relative overflow-hidden">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-3 z-1">¡Nuevo!</span>
+                            <img src="../img/figuraluffy.jpg" class="card-img-top hover-zoom" alt="Luffy Banpresto">
                         </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="h5 card-title">Figuras One Piece</h3>
-                            <p class="text-warning fw-bold fs-4 mt-auto">29.99€</p>
-                            <button class="btn btn-warning rounded-pill fw-bold w-100 mt-2">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-img p-3">
-                            <img src="../img/narutofigura2.jpg" class="img-fluid rounded hover-zoom" alt="Figuras Naruto">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="h5 card-title">Figuras Naruto</h3>
-                            <p class="text-warning fw-bold fs-4 mt-auto">24.99€</p>
-                            <button class="btn btn-warning rounded-pill fw-bold w-100 mt-2">Comprar</button>
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h6 card-title fw-bold">Figura Luffy Banpresto</h3>
+                            <p class="small text-secondary mb-3">One Piece - King of Artist</p>
+                            <p class="text-warning fw-bold fs-4 mt-auto mb-2">45.99€</p>
+                            <button class="btn btn-warning rounded-pill fw-bold w-100"><i class="bi bi-cart-plus me-1"></i> Comprar</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-img p-3">
-                            <img src="../img/zelda2.jpg" class="img-fluid rounded hover-zoom" alt="Figuras Zelda">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="h5 card-title">Figuras Zelda</h3>
-                            <p class="text-warning fw-bold fs-4 mt-auto">34.99€</p>
-                            <button class="btn btn-warning rounded-pill fw-bold w-100 mt-2">Comprar</button>
+                <article class="col">
+                    <div class="card h-100 shadow-sm border-0 product-card">
+                        <img src="../img/figuraitachi.jpg" class="card-img-top hover-zoom" alt="Itachi Uchiha">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h6 card-title fw-bold">Figura Itachi Uchiha</h3>
+                            <p class="small text-secondary mb-3">Naruto Shippuden - Vibration Stars</p>
+                            <p class="text-warning fw-bold fs-4 mt-auto mb-2">52.99€</p>
+                            <button class="btn btn-warning rounded-pill fw-bold w-100"><i class="bi bi-cart-plus me-1"></i> Comprar</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-img p-3">
-                            <img src="../img/dragonball.jpg" class="img-fluid rounded hover-zoom" alt="Figuras Dragon Ball">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="h5 card-title">Figuras Dragon Ball</h3>
-                            <p class="text-warning fw-bold fs-4 mt-auto">19.99€</p>
-                            <button class="btn btn-warning rounded-pill fw-bold w-100 mt-2">Comprar</button>
+                <article class="col">
+                    <div class="card h-100 shadow-sm border-0 product-card">
+                        <img src="../img/figurazelda2.jpg" class="card-img-top hover-zoom" alt="Link Breath of Wild">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h6 card-title fw-bold">Link Breath of the Wild</h3>
+                            <p class="small text-secondary mb-3">The Legend of Zelda - First 4 Figures</p>
+                            <p class="text-warning fw-bold fs-4 mt-auto mb-2">48.99€</p>
+                            <button class="btn btn-warning rounded-pill fw-bold w-100"><i class="bi bi-cart-plus me-1"></i> Comprar</button>
                         </div>
                     </div>
                 </article>
-            </div>
+
+                <article class="col">
+                    <div class="card h-100 shadow-sm border-0 product-card">
+                        <div class="position-relative overflow-hidden">
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 z-1">-10%</span>
+                            <img src="../img/figuragoku.jgp.png" class="card-img-top hover-zoom" alt="Goku SSJ2">
+                        </div>
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h6 card-title fw-bold">Goku Super Saiyan 2</h3>
+                            <p class="small text-secondary mb-3">Dragon Ball Z - Solid Edge Works</p>
+                            <p class="text-warning fw-bold fs-4 mt-auto mb-2">55.99€</p>
+                            <button class="btn btn-warning rounded-pill fw-bold w-100"><i class="bi bi-cart-plus me-1"></i> Comprar</button>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
         </section>
     </main>
 
     <footer class="bg-black text-white pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row">
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">FRIKISTORE</h5>
-                    <p>Coleccionismo y cultura geek. Importación directa y preventas exclusivas.</p>
+                <div class="col-md-4 mt-3">
+                    <h5 class="text-warning fw-bold">FRIKISTORE</h5>
+                    <p>Coleccionismo y cultura geek. Importación directa.</p>
                 </div>
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nosotros</h5>
-                    <p><a href="#" class="text-white text-decoration-none">Tiendas</a></p>
-                    <p><a href="#" class="text-white text-decoration-none">Envíos</a></p>
-                    <p><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></p>
+                <div class="col-md-4 mt-3">
+                    <h5 class="text-warning fw-bold">Ayuda</h5>
+                    <p><a href="#" class="text-white text-decoration-none small">Soporte</a></p>
+                    <p><a href="#" class="text-white text-decoration-none small">FAQ</a></p>
                 </div>
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Ayuda</h5>
-                    <p><a href="#" class="text-white text-decoration-none">Soporte</a></p>
-                    <p><a href="#" class="text-white text-decoration-none">FAQ</a></p>
+                <div class="col-md-4 mt-3">
+                    <h5 class="text-warning fw-bold text-center text-md-start">Síguenos</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter-x"></i>
+                    </div>
                 </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="text-center text-secondary small">
+                © 2026 Frikistore Team | Trabajo Colaborativo (Izan, Luis, Alvaro)
+            </div>
+        </div>
+    </footer>
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="carritoLateral"
+    aria-labelledby="carritoLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold text-warning" id="carritoLabel">MI CARRITO NAKAMA</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
 
-                <div class="col-md-4 col-lg
+    <div class="offcanvas-body">
+        <div class="cart-item d-flex align-items-center gap-3 mb-4 p-2 bg-secondary bg-opacity-25 rounded">
+            <img src="../img/figuraluffy.jpg" alt="Luffy" class="rounded shadow-sm"
+                style="width: 60px; height: 60px; object-fit: cover;">
+            <div class="flex-grow-1">
+                <h6 class="mb-0 small fw-bold">Figura Luffy Banpresto</h6>
+                <p class="mb-0 text-warning small">45.99€</p>
+            </div>
+            <button class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer p-3 border-top border-secondary bg-black">
+        <div class="d-flex justify-content-between mb-3">
+            <span class="fw-bold">Total:</span>
+            <span class="text-warning fw-bold fs-5">45.99€</span>
+        </div>
+        <button class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow">FINALIZAR COMPRA</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
