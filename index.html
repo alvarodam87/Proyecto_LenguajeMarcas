@@ -19,15 +19,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item"><a class="nav-link" href="pages/catalogo.html">Figuras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ropa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Preventas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
-                </ul>
+<ul class="navbar-nav mx-auto text-center">
+    <li class="nav-item"><a class="nav-link active text-warning" href="index.html">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="pages/catalogo.html">Figuras</a></li>
+    <li class="nav-item"><a class="nav-link" href="pages/ropa.html">Ropa</a></li>
+    <li class="nav-item"><a class="nav-link" href="pages/preventas.html">Preventas</a></li>
+    <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+</ul>
                 <div class="d-flex justify-content-center align-items-center gap-3">
                     <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
+                
+                    <button class="btn text-white position-relative" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#carritoLateral">
+                        <i class="bi bi-cart-fill fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                
                     <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
                 </div>
             </div>
@@ -167,6 +176,7 @@
             </div>
         </section>
 
+<<<<<<< HEAD
         <section class="newsletter container py-5">
             <div class="bg-black text-white p-5 rounded-4 text-center shadow-lg border border-warning border-opacity-25">
                 <h2 class="fw-bold">Recibe las preventas antes que nadie</h2>
@@ -215,10 +225,103 @@
             <hr class="mt-5 mb-4 border-secondary border-opacity-50">
             <div class="text-center text-secondary">
                 <small>© 2026 Frikistore Team | Trabajo Colaborativo (Izan, Luis, Alvaro)</small>
+=======
+
+<!-- CTA SECTION (CTA ENCIMA DEL FONDO LEGO) -->
+
+
+<div class="cta-container">
+    
+
+    <div class="cta-card">
+        <span class="cta-tag">EXCLUSIVO PARA FANS</span>
+        <h2>¡Recibe las preventas antes que nadie!</h2>
+    
+        <p>Suscríbete a nuestro newsletter y sé el primero en enterarte de las novedades y ofertas especiales.</p>
+        <form id="newsletter" class="cta-form">
+            <input type="email" placeholder="Tu email friki..." required>
+            <button type="submit" class="btn-lego">SUSCRIBIRME</button>
+        </form>
+    </div>
+    
+    </div>
+
+
+
+
+</main>
+
+    <footer class="bg-black text-white pt-5 pb-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">FRIKISTORE</h5>
+                    <p>Tu tienda de confianza para coleccionismo y cultura geek. Importación directa y preventas exclusivas.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nosotros</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Tiendas</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">Envíos</a></p>
+                    <p><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Ayuda</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Soporte</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">FAQ</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Síguenos</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary border-opacity-50">
+            <div class="text-center text-secondary pb-2">
+                <small>© 2026 Frikistore Team | Luis, Izan, Alvaro</small>
+>>>>>>> e4b46231b6fff5d41f12e98f69e7d57b21d971d6
             </div>
         </div>
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="carritoLateral" aria-labelledby="carritoLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold text-warning" id="carritoLabel">MI CARRITO NAKAMA</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body">
+        <div class="cart-item d-flex align-items-center gap-3 mb-4 p-2 bg-secondary bg-opacity-25 rounded">
+            <img src="img/figuraluffy.jpg" alt="Luffy" class="rounded shadow-sm" style="width: 60px; height: 60px; object-fit: cover;">
+            <div class="flex-grow-1">
+                <h6 class="mb-0 small fw-bold">Figura Luffy Banpresto</h6>
+                <p class="mb-0 text-warning small">45.99€</p>
+            </div>
+            <button class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
+        </div>
+
+        <div class="text-center py-5 d-none">
+            <i class="bi bi-cart-x display-1 text-secondary"></i>
+            <p class="mt-3">Tu carrito está vacío.</p>
+            <a href="pages/catalogo.html" class="btn btn-warning rounded-pill px-4">Ir a la tienda</a>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer p-3 border-top border-secondary bg-black">
+        <div class="d-flex justify-content-between mb-3">
+            <span class="fw-bold">Total:</span>
+            <span class="text-warning fw-bold fs-5">45.99€</span>
+        </div>
+        <button class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow">FINALIZAR COMPRA</button>
+    </div>
+</div>
+
 </body>
 </html>
