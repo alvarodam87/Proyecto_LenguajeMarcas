@@ -186,7 +186,7 @@ footer a:hover {
 .cta-container {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 520px; /* aumentado para CTA más grande */
     overflow: hidden;
     font-family: 'Arial Black', sans-serif;
 }
@@ -200,12 +200,14 @@ footer a:hover {
     z-index: 2;
 
     background: url('../img/fondo-lego.png.png') center/cover no-repeat;
-    padding: 30px;
+    padding: 40px; /* más espacio interno */
     border: 8px solid #cc0000;
     box-shadow: 8px 8px 0px #333;
     text-align: center;
-    max-width: 500px;
-}
+    width: min(900px, 88%); /* ancho máximo aumentado */
+    max-width: 900px;
+    box-sizing: border-box;
+} 
 .cta-tag {
     background: #ffcb05;
     color: #333;
@@ -230,8 +232,10 @@ footer a:hover {
 input[type="email"] {
     padding: 12px;
     border: 4px solid #333;
-    width: 60%;
+    width: 75%;
+    max-width: 650px;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 btn-lego {
@@ -306,4 +310,12 @@ btn-lego:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     text-align: center;
+}
+
+/* Reglas responsivas para el CTA */
+@media (max-width: 768px) {
+    .cta-container { height: 480px; }
+    .cta-card { width: calc(100% - 40px); padding: 20px; left: 50%; transform: translate(-50%, -40%); }
+    input[type="email"] { width: 100%; max-width: none; margin-bottom: 12px; }
+    .cta-card .btn { width: 100%; }
 }

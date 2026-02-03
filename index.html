@@ -17,9 +17,9 @@
       .navbar .btn-outline-warning{border-color:#ffc107;color:#ffc107}
       .navbar .navbar-toggler{border-color:rgba(255,255,255,0.08)}
     </style>
-    <!-- Carga no bloqueante del CSS principal -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <!-- Carga no bloqueante del CSS principal (cache-busted) -->
+    <link rel="preload" href="css/style.css?v=3" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css?v=3"></noscript>
     <!-- Prefetch de páginas importantes -->
     <link rel="prefetch" href="pages/ropa.html">
     <link rel="prefetch" href="pages/preventas.html">
@@ -303,7 +303,7 @@
 <div class="cta-container">
     
 
-    <div class="cta-card">        
+    <div class="cta-card" style="width: min(900px, 88%); max-width: 900px; padding: 40px; box-sizing: border-box;">        
         <span class="cta-tag">EXCLUSIVO PARA FANS</span>
          <h2>¡Recibe las preventas antes que nadie!</h2>
 
@@ -343,11 +343,6 @@
                     <i class="bi bi-twitter-x"></i>
                 </div>
             </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center payment-icons mt-4">
-            <img src="img/pay_visa.svg" alt="VISA" loading="lazy" width="56" height="20">
-            <img src="img/pay_mastercard.svg" alt="Mastercard" loading="lazy" width="56" height="20">
-            <img src="img/pay_paypal.svg" alt="PayPal" loading="lazy" width="56" height="20">
         </div>
         <hr class="mt-5 mb-4 border-secondary">
         <div class="text-center text-secondary small">
