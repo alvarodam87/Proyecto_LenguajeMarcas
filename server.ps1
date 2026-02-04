@@ -18,19 +18,28 @@ while ($listener.IsListening) {
     $filePath = Join-Path $path $localPath.TrimStart("/")
 
     if (Test-Path $filePath -PathType Leaf) {
-        $content = Get-Content $filePath -Raw -Encoding UTF8
-        $response.ContentType = if ($filePath.EndsWith(".html")) { "text/html" } elseif ($filePath.EndsWith(".css")) { "text/css" } elseif ($filePath.EndsWith(".js")) { "application/javascript" } else { "application/octet-stream" }
-        $buffer = [System.Text.Encoding]::UTF8.GetBytes($content)
-        $response.ContentLength64 = $buffer.Length
-        $response.OutputStream.Write($buffer, 0, $buffer.Length)
+        # Determinamos el tipo de contenido según la extensión
+        $extension = [System.IO.Path]::GetExtension($filePath).ToLower()
+        $response.ContentType = switch ($extension) {
+            ".html" { "text/html; charset=utf-8" }
+            ".css"  { "text/css" }
+            ".js"   { "application/javascript" }
+            ".jpg"  { "image/jpeg" }
+            ".jpeg" { "image/jpeg" }
+            ".png"  { "image/png" }
+            ".gif"  { "image/gif" }
+            ".svg"  { "image/svg+xml" }
+            default { "application/octet-stream" }
+        }
+
+        # LEER COMO BYTES (Fundamental para imágenes y archivos binarios)
+        $bytes = [System.IO.File]::ReadAllBytes($filePath)
+        $response.ContentLength64 = $bytes.Length
+        $response.OutputStream.Write($bytes, 0, $bytes.Length)
     } else {
         $response.StatusCode = 404
-        $notFound = "<h1>404 Not Found</h1>"
-        $buffer = [System.Text.Encoding]::UTF8.GetBytes($notFound)
+        $buffer = [System.Text.Encoding]::UTF8.GetBytes("<h1>404 Not Found: $localPath</h1>")
         $response.OutputStream.Write($buffer, 0, $buffer.Length)
     }
-
     $response.OutputStream.Close()
-}
-
-$listener.Stop()
+} 
