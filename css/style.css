@@ -71,6 +71,11 @@ body {
 }
 
 /* 5. ELEMENTOS LEGO Y CTA */
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 .cta-card {
     background: url('../img/fondo-lego.png.png') center/cover no-repeat;
     padding: 30px;
