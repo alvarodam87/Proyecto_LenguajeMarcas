@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrikiStore | Sube de nivel tu colección</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Font Awesome (para iconos de pago) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- CSS propio (solo lo que Bootstrap no puede) -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Prefetch de páginas secundarias -->
     <link rel="prefetch" href="pages/ropa.html">
     <link rel="prefetch" href="pages/preventas.html">
     <link rel="prefetch" href="pages/catalogo.html">
@@ -23,16 +18,12 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">FRIKISTORE</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item"><a class="nav-link text-uppercase" href="pages/catalogo.html">Figuras</a></li>
@@ -41,20 +32,9 @@
                     <li class="nav-item"><a class="nav-link text-uppercase" href="pages/catalogo.html">Ofertas</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase" href="pages/contacto.html">Contacto</a></li>
                 </ul>
-
                 <div class="d-flex justify-content-center align-items-center gap-3">
-                    <!-- Buscador expandible -->
-                    <div class="search-wrapper d-flex align-items-center">
-                        <input type="text" id="searchInput" class="search-input form-control form-control-sm bg-dark text-white border-secondary"
-                            placeholder="Buscar..." aria-label="Buscar productos" style="display:none; max-width: 180px;">
-                        <span class="text-white cursor-pointer ms-2" id="searchToggle" aria-label="Abrir buscador">
-                            <i class="bi bi-search fs-5"></i>
-                        </span>
-                    </div>
-                    <!-- Sign In con icono -->
-                    <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-4">
-                        <i class="bi bi-person me-1"></i> Sign In
-                    </a>
+                    <span class="text-white cursor-pointer"><i class="bi bi-search"></i></span>
+                    <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
                 </div>
             </div>
         </div>
@@ -62,109 +42,97 @@
 
     <main class="flex-grow-1">
 
-        <!-- ===================== HERO ===================== -->
-        <section class="hero container-fluid py-5 hero-bg">
-            <div class="container py-lg-4">
-                <div class="row align-items-center g-5">
-
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <h1 class="display-3 fw-bold mb-4">
-                            Sube de nivel tu colección de <span class="text-warning">figuras</span>
-                        </h1>
-                        <p class="lead mb-4 text-secondary">
-                            Encuentra las piezas más exclusivas de tus series favoritas. Importación directa desde Japón.
-                        </p>
-                        <div class="d-grid d-sm-flex gap-3 justify-content-center justify-content-lg-start">
-                            <a href="pages/catalogo.html" class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow">
-                                Explorar catálogo
-                            </a>
-                            <a href="#novedades" class="btn btn-outline-dark btn-lg rounded-pill px-5">
-                                Ver novedades
-                            </a>
-                        </div>
+        <!-- HERO -->
+        <section class="hero container py-5 mt-lg-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold mb-4">
+                        Sube de nivel tu colección de <span class="text-warning">figuras</span>
+                    </h1>
+                    <p class="lead mb-4 text-secondary">
+                        Encuentra las piezas más exclusivas de tus series favoritas. Importación directa desde Japón.
+                    </p>
+                    <div class="d-grid d-sm-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="pages/catalogo.html" class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow">
+                            Explorar catálogo
+                        </a>
+                        <a href="#novedades" class="btn btn-outline-dark btn-lg rounded-pill px-5">
+                            Ver novedades
+                        </a>
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-8">
-                                <img src="img/superman2.jpg" class="img-fluid rounded shadow-lg" alt="Figura coleccionable de Superman">
-                            </div>
-                            <div class="col-4 d-flex flex-column gap-3">
-                                <img src="img/minato.webp" class="img-fluid rounded shadow" alt="Figura coleccionable de Minato - Naruto">
-                                <img src="img/tmn2.jpg" class="img-fluid rounded shadow" alt="Figura coleccionable Tortugas Ninja">
-                                <img src="img/starwar.jpg" class="img-fluid rounded shadow" alt="Figura coleccionable Star Wars">
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-8">
+                            <img src="img/superman2.jpg" class="img-fluid rounded shadow-lg" alt="Superman figura">
+                        </div>
+                        <div class="col-4 d-flex flex-column gap-3">
+                            <img src="img/minato.webp" class="img-fluid rounded shadow" alt="Minato figura">
+                            <img src="img/tmn2.jpg" class="img-fluid rounded shadow" alt="TMNT figura">
+                            <img src="img/starwar.jpg" class="img-fluid rounded shadow" alt="Star Wars figura">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== LICENCIAS ===================== -->
+        <!-- LICENCIAS -->
         <section class="container py-5">
             <div class="text-center">
                 <h2 class="section-title fw-bold mb-4 text-uppercase">Licencias más populares</h2>
             </div>
-
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center">
-
                 <div class="col">
-                    <article class="card licencia-card p-4 shadow-sm border-0 h-100">
+                    <article class="card p-4 shadow-sm border-0 h-100 licencia-card">
                         <div class="d-flex align-items-center justify-content-center" style="height: 150px;">
-                            <img src="img/logoonepiece.png" class="img-fluid" alt="Logo One Piece" style="max-height: 100%; object-fit: contain;">
+                            <img src="img/logoonepiece.png" class="img-fluid" alt="One Piece" style="max-height: 100%; object-fit: contain;">
                         </div>
-                        <h3 class="h5 mt-3 fw-bold">One Piece</h3>
+                        <h3 class="h5 mt-3">One Piece</h3>
                     </article>
                 </div>
-
                 <div class="col">
-                    <article class="card licencia-card p-4 shadow-sm border-0 h-100">
+                    <article class="card p-4 shadow-sm border-0 h-100 licencia-card">
                         <div class="d-flex align-items-center justify-content-center" style="height: 150px;">
-                            <img src="img/logonaruto.jpg" class="img-fluid" alt="Logo Naruto" style="max-height: 100%; object-fit: contain;">
+                            <img src="img/logonaruto.jpg" class="img-fluid" alt="Naruto" style="max-height: 100%; object-fit: contain;">
                         </div>
-                        <h3 class="h5 mt-3 fw-bold">Naruto</h3>
+                        <h3 class="h5 mt-3">Naruto</h3>
                     </article>
                 </div>
-
                 <div class="col">
-                    <article class="card licencia-card p-4 shadow-sm border-0 h-100">
+                    <article class="card p-4 shadow-sm border-0 h-100 licencia-card">
                         <div class="d-flex align-items-center justify-content-center" style="height: 150px;">
-                            <img src="img/logozelda.jpg" class="img-fluid" alt="Logo Zelda" style="max-height: 100%; object-fit: contain;">
+                            <img src="img/logoZelda.jpg" class="img-fluid" alt="Zelda" style="max-height: 100%; object-fit: contain;">
                         </div>
-                        <h3 class="h5 mt-3 fw-bold">Zelda</h3>
+                        <h3 class="h5 mt-3">Zelda</h3>
                     </article>
                 </div>
-
                 <div class="col">
-                    <article class="card licencia-card p-4 shadow-sm border-0 h-100">
+                    <article class="card p-4 shadow-sm border-0 h-100 licencia-card">
                         <div class="d-flex align-items-center justify-content-center" style="height: 150px;">
-                            <img src="img/logodragonball.jpg" class="img-fluid" alt="Logo Dragon Ball" style="max-height: 100%; object-fit: contain;">
+                            <img src="img/logodragonball.jpg" class="img-fluid" alt="Dragon Ball" style="max-height: 100%; object-fit: contain;">
                         </div>
-                        <h3 class="h5 mt-3 fw-bold">Dragon Ball</h3>
+                        <h3 class="h5 mt-3">Dragon Ball</h3>
                     </article>
                 </div>
-
             </div>
         </section>
 
-        <!-- ===================== PRODUCTOS DESTACADOS ===================== -->
+        <!-- PRODUCTOS DESTACADOS -->
         <section class="container py-5">
             <div class="text-center">
                 <h2 class="section-title fw-bold mb-4 text-uppercase">Productos Destacados</h2>
             </div>
-
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-
                 <article class="col">
                     <div class="card product-card border-0 shadow-sm h-100 overflow-hidden rounded-3">
                         <div class="img-container">
-                            <img src="img/figuraluffy.jpg" class="card-img-top" alt="Figura Luffy Banpresto - One Piece">
+                            <img src="img/figuraluffy.jpg" class="card-img-top" alt="Figura Luffy">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">Figura Luffy Banpresto</h5>
-                            <p class="card-text text-secondary small">Figura premium de One Piece con detalles impresionantes. Importación directa desde Japón.</p>
+                            <p class="card-text text-secondary small">Figura premium de One Piece con detalles impresionantes.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="text-warning fw-bold fs-5">45.99€</span>
+                                <span class="text-warning fw-bold">45.99€</span>
                                 <button class="btn btn-warning btn-sm rounded-pill px-3">
                                     <i class="bi bi-cart-plus me-1"></i>Agregar
                                 </button>
@@ -172,17 +140,16 @@
                         </div>
                     </div>
                 </article>
-
                 <article class="col">
                     <div class="card product-card border-0 shadow-sm h-100 overflow-hidden rounded-3">
                         <div class="img-container">
-                            <img src="img/figuraitachi.jpg" class="card-img-top" alt="Figura Itachi Uchiha - Naruto">
+                            <img src="img/figuraitachi.jpg" class="card-img-top" alt="Figura Itachi">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">Figura Itachi Uchiha</h5>
-                            <p class="card-text text-secondary small">Figura de edición limitada del legendario ninja de Naruto. Acabado premium con peana incluida.</p>
+                            <p class="card-text text-secondary small">Colección Vibration Stars de Naruto Shippuden.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="text-warning fw-bold fs-5">52.99€</span>
+                                <span class="text-warning fw-bold">52.99€</span>
                                 <button class="btn btn-warning btn-sm rounded-pill px-3">
                                     <i class="bi bi-cart-plus me-1"></i>Agregar
                                 </button>
@@ -190,17 +157,16 @@
                         </div>
                     </div>
                 </article>
-
                 <article class="col">
                     <div class="card product-card border-0 shadow-sm h-100 overflow-hidden rounded-3">
                         <div class="img-container">
-                            <img src="img/figurazelda2.jpg" class="card-img-top" alt="Figura Zelda - The Legend of Zelda">
+                            <img src="img/figurazelda2.jpg" class="card-img-top" alt="Figura Zelda">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">Figura Zelda</h5>
-                            <p class="card-text text-secondary small">Figura oficial de la princesa Zelda con detalles artesanales y acabado en resina de alta calidad.</p>
+                            <p class="card-text text-secondary small">Link Breath of the Wild - The Legend of Zelda.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="text-warning fw-bold fs-5">55.99€</span>
+                                <span class="text-warning fw-bold">55.99€</span>
                                 <button class="btn btn-warning btn-sm rounded-pill px-3">
                                     <i class="bi bi-cart-plus me-1"></i>Agregar
                                 </button>
@@ -208,59 +174,52 @@
                         </div>
                     </div>
                 </article>
-
             </div>
         </section>
 
-        <!-- ===================== EVENTOS Y TESTIMONIOS ===================== -->
+        <!-- EVENTOS Y TESTIMONIOS -->
         <section id="novedades" class="container py-5">
             <h2 class="mb-4 fw-bold text-center text-uppercase">Eventos y Testimonios</h2>
-
             <div class="row g-4">
-
                 <div class="col-lg-8">
                     <div id="newsCarousel" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/comiccon2.png" class="d-block w-100" alt="Próximo evento: Comic Con 2026" style="height: 450px; object-fit: cover;">
+                                <img src="img/comiccon2.png" class="d-block w-100" alt="Comic Con 2026" style="height: 450px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                                     <h5>Próximos Eventos: Comic Con 2026</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/fondoMarvel.jpg" class="d-block w-100" alt="Nueva colección Marvel disponible" style="height: 450px; object-fit: cover;">
+                                <img src="img/fondoMarvel.jpg" class="d-block w-100" alt="Colección Marvel" style="height: 450px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                                     <h5>Nueva Colección Marvel</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/figuraspowereanger.jpg" class="d-block w-100" alt="Nueva colección Power Rangers" style="height: 450px; object-fit: cover;">
+                                <img src="img/figuraspowereanger.jpg" class="d-block w-100" alt="Power Rangers" style="height: 450px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                                     <h5>Nueva Colección Power Rangers</h5>
                                 </div>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
+                            <span class="carousel-control-prev-icon"></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
+                            <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
-
                 <div class="col-lg-4">
                     <div class="d-flex flex-column gap-3">
                         <h4 class="h5 fw-bold mb-2">Lo que dicen nuestros Nakamas</h4>
-
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center gap-3">
-                                <img src="img/yo20años.jpg" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" alt="Foto de perfil de Carlos R.">
+                                <img src="img/yo20años.jpg" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" alt="Carlos">
                                 <div>
                                     <h6 class="mb-0 fw-bold">Carlos R.</h6>
-                                    <small class="text-warning" aria-label="5 estrellas">
+                                    <small class="text-warning">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -269,13 +228,12 @@
                             </div>
                             <p class="small text-muted mt-2 mb-0">"La figura de Luffy llegó perfecta. ¡100% originales!"</p>
                         </div>
-
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center gap-3">
-                                <img src="img/carla.png" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" alt="Foto de perfil de Carla M.">
+                                <img src="img/carla.png" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" alt="Carla">
                                 <div>
                                     <h6 class="mb-0 fw-bold">Carla M.</h6>
-                                    <small class="text-warning" aria-label="5 estrellas">
+                                    <small class="text-warning">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -284,124 +242,267 @@
                             </div>
                             <p class="small text-muted mt-2 mb-0">"¡Me encantó la tienda, la atención al cliente es increíble!"</p>
                         </div>
-
                         <div class="card border-0 p-3 text-center bg-warning">
                             <h6 class="fw-bold mb-2">¿Eres friki de corazón?</h6>
                             <p class="small mb-3">Únete a nuestra comunidad y recibe contenido exclusivo.</p>
                             <a href="#newsletter" class="btn btn-dark btn-sm">SUSCRIBIRME</a>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== CTA NEWSLETTER ===================== -->
-        <div class="d-flex justify-content-center align-items-center py-5 px-3">
-            <div class="cta-card text-center p-5 col-12 col-lg-8 mx-auto">
+        <!-- CTA NEWSLETTER -->
+        <div class="d-flex justify-content-center align-items-center py-5">
+            <div class="cta-card text-center p-5">
                 <span class="badge bg-danger mb-2">EXCLUSIVO PARA FANS</span>
                 <h2 class="fw-bold">¡Recibe las preventas antes que nadie y obtén grandes ofertas!</h2>
-
-                <form id="newsletter" class="d-flex flex-column flex-sm-row gap-2 mt-3 justify-content-center" novalidate>
-                    <input type="email" id="emailInput" class="form-control" placeholder="Tu email friki..." required
-                        aria-label="Introduce tu email" style="max-width: 300px;">
+                <form id="newsletter" class="d-flex flex-column flex-sm-row gap-2 mt-3 justify-content-center">
+                    <input type="email" class="form-control" placeholder="Tu email friki..." required style="max-width: 300px;">
                     <button type="submit" class="btn btn-dark fw-bold">SUSCRIBIRME</button>
                 </form>
-
-                <!-- Mensaje de confirmación -->
-                <div id="newsletter-ok" class="alert alert-success mt-3 d-none" role="alert">
-                    <i class="bi bi-check-circle-fill me-2"></i>¡Genial! Ya eres parte de la comunidad FrikiStore. 🎉
-                </div>
             </div>
         </div>
 
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!-- FOOTER -->
     <footer class="bg-black text-white pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row">
-
                 <div class="col-md-3 mt-3">
                     <h5 class="text-warning fw-bold">FRIKISTORE</h5>
                     <p>Tu tienda de confianza para coleccionismo y cultura geek. Importación directa y preventas exclusivas.</p>
                 </div>
-
                 <div class="col-md-3 mt-3">
                     <h5 class="text-warning fw-bold">Ayuda</h5>
                     <p><a href="#" class="text-white text-decoration-none">Soporte</a></p>
                     <p><a href="#" class="text-white text-decoration-none">FAQ</a></p>
                 </div>
-
                 <div class="col-md-3 mt-3">
                     <h5 class="text-warning fw-bold">Síguenos</h5>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
-                        <a href="#" class="text-white" aria-label="Síguenos en Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white" aria-label="Síguenos en Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white" aria-label="Síguenos en Twitter / X"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-white" aria-label="Síguenos en YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-
                 <div class="col-md-3 mt-3">
                     <h5 class="text-warning fw-bold">Métodos de pago</h5>
                     <div class="payment-icons d-flex gap-2 flex-wrap justify-content-center justify-content-md-start fs-3">
-                        <i class="fab fa-cc-visa text-white" aria-label="Visa"></i>
-                        <i class="fab fa-cc-mastercard text-white" aria-label="Mastercard"></i>
-                        <i class="fab fa-cc-paypal text-white" aria-label="PayPal"></i>
-                        <i class="fab fa-cc-amex text-white" aria-label="American Express"></i>
+                        <i class="fab fa-cc-visa text-white"></i>
+                        <i class="fab fa-cc-mastercard text-white"></i>
+                        <i class="fab fa-cc-paypal text-white"></i>
+                        <i class="fab fa-cc-amex text-white"></i>
                     </div>
                 </div>
-
             </div>
-
             <hr class="mt-5 mb-4 border-secondary">
-
             <div class="text-center text-secondary small">
                 © 2026 Frikistore Team | Trabajo Colaborativo (Izan, Luis, Alvaro)
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- ===================== CHATBOT FLOTANTE ===================== -->
+    <button id="chatToggle" class="chat-toggle-btn" aria-label="Abrir chat de ayuda">
+        <i class="bi bi-chat-dots-fill fs-4"></i>
+    </button>
+
+    <div id="chatWindow" class="chat-window d-none">
+        <div class="chat-header d-flex align-items-center justify-content-between px-3 py-2">
+            <div class="d-flex align-items-center gap-2">
+                <span class="chat-avatar rounded-circle bg-warning d-flex align-items-center justify-content-center">
+                    <i class="bi bi-robot text-dark"></i>
+                </span>
+                <div>
+                    <p class="mb-0 fw-bold small">FrikiBot</p>
+                    <p class="mb-0 text-success" style="font-size: 0.7rem;">● En línea</p>
+                </div>
+            </div>
+            <button id="chatClose" class="btn btn-sm text-white p-0" aria-label="Cerrar chat">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg bot">
+                <p>¡Hola Nakama! 👋 Soy <strong>FrikiBot</strong>, tu asistente de FrikiStore.<br>¿En qué puedo ayudarte hoy?</p>
+            </div>
+            <div class="chat-options" id="chatOptions">
+                <button class="chat-opt-btn" data-topic="pedidos">📦 Pedidos y envíos</button>
+                <button class="chat-opt-btn" data-topic="productos">🗿 Productos y stock</button>
+                <button class="chat-opt-btn" data-topic="preventas">⭐ Preventas</button>
+                <button class="chat-opt-btn" data-topic="faq">❓ Preguntas frecuentes</button>
+            </div>
+        </div>
+
+        <div class="chat-input-area d-flex gap-2 p-2 border-top">
+            <input type="text" id="chatInput" class="form-control form-control-sm border-0 bg-light"
+                placeholder="Escribe tu pregunta..." aria-label="Escribe tu mensaje">
+            <button id="chatSend" class="btn btn-warning btn-sm rounded-pill px-3" aria-label="Enviar mensaje">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+    </div>
+
     <script>
-        // Buscador expandible en la navbar
-        const searchToggle = document.getElementById('searchToggle');
-        const searchInput = document.getElementById('searchInput');
+    const respuestas = {
+        pedidos: {
+            texto: "📦 <strong>Pedidos y envíos</strong><br><br>• Envío estándar: <strong>3-5 días hábiles</strong><br>• Envío express: <strong>24-48h</strong> (+4.99€)<br>• Gratis a partir de <strong>50€</strong><br>• Seguimiento por email tras confirmar el pedido.",
+            opciones: ["¿Cómo hago una devolución?", "¿Puedo cambiar mi dirección?", "Volver al menú"]
+        },
+        productos: {
+            texto: "🗿 <strong>Productos y stock</strong><br><br>• Todas nuestras figuras son <strong>100% originales</strong> con certificado.<br>• Importación directa desde <strong>Japón</strong>.<br>• Si un producto está agotado, puedes apuntarte a la <strong>lista de espera</strong> por email.",
+            opciones: ["¿Sois distribuidores oficiales?", "¿Tenéis garantía?", "Volver al menú"]
+        },
+        preventas: {
+            texto: "⭐ <strong>Preventas</strong><br><br>• Reserva <strong>sin coste adicional</strong>.<br>• Solo pagas cuando llega al almacén.<br>• Cancelación <strong>gratuita</strong> en cualquier momento.<br>• Recibes aviso por email cuando tu figura esté lista.",
+            opciones: ["¿Cuánto tarda una preventa?", "¿Puedo cancelar mi reserva?", "Volver al menú"]
+        },
+        faq: {
+            texto: "❓ <strong>Preguntas frecuentes</strong><br><br>• <strong>¿Cómo pago?</strong> Visa, Mastercard, PayPal y Amex.<br>• <strong>¿Hacéis facturas?</strong> Sí, solicítala en soporte@frikistore.es.<br>• <strong>¿Tienda física?</strong> Solo online de momento.<br>• <strong>¿Atención al cliente?</strong> Lun-Vie 9:00-20:00.",
+            opciones: ["¿Cómo contacto con vosotros?", "¿Aceptáis devoluciones?", "Volver al menú"]
+        },
+        devolucion: { texto: "🔄 <strong>Devoluciones</strong><br><br>• Tienes <strong>14 días</strong> desde la recepción para devolver.<br>• El producto debe estar en su <strong>embalaje original</strong>.<br>• Escríbenos a <strong>soporte@frikistore.es</strong> para iniciar el proceso.", opciones: ["Volver al menú"] },
+        garantia: { texto: "✅ <strong>Garantía</strong><br><br>• Todas las figuras tienen <strong>garantía de autenticidad</strong>.<br>• Si recibes un producto dañado, te lo reponemos <strong>sin coste</strong>.<br>• Contacta en soporte@frikistore.es con fotos del problema.", opciones: ["Volver al menú"] },
+        contacto: { texto: "📬 <strong>Contacto</strong><br><br>• Email: <strong>soporte@frikistore.es</strong><br>• Tel: <strong>+34 900 123 456</strong><br>• Horario: Lun-Vie 9:00-20:00<br>• O usa nuestro <a href='pages/contacto.html' class='text-warning'>formulario de contacto</a>.", opciones: ["Volver al menú"] },
+        cancelar: { texto: "❌ <strong>Cancelar reserva</strong><br><br>• Puedes cancelar tu preventa en cualquier momento <strong>sin penalización</strong>.<br>• Escríbenos a soporte@frikistore.es con tu número de pedido.", opciones: ["Volver al menú"] },
+        tiempo_preventa: { texto: "⏳ <strong>Tiempo de preventas</strong><br><br>• Depende del fabricante, pero suele ser entre <strong>2 y 6 meses</strong>.<br>• Cada producto muestra la <strong>fecha estimada</strong> de llegada en su ficha.", opciones: ["Volver al menú"] },
+        distribuidores: { texto: "🏆 <strong>Distribuidores oficiales</strong><br><br>• Sí, somos distribuidores <strong>autorizados</strong> de Banpresto, Kotobukiya y otras marcas.<br>• Cada figura incluye su <strong>certificado de autenticidad</strong>.", opciones: ["Volver al menú"] },
+        direccion: { texto: "📍 <strong>Cambiar dirección</strong><br><br>• Puedes cambiar la dirección <strong>antes de que el pedido sea enviado</strong>.<br>• Escríbenos rápido a soporte@frikistore.es con tu número de pedido.", opciones: ["Volver al menú"] },
+        default: { texto: "🤔 No he entendido bien tu pregunta. Prueba con una de las opciones del menú o escríbenos a <strong>soporte@frikistore.es</strong>.", opciones: ["Volver al menú"] }
+    };
 
-        searchToggle.addEventListener('click', () => {
-            if (searchInput.style.display === 'none' || searchInput.style.display === '') {
-                searchInput.style.display = 'block';
-                searchInput.focus();
-            } else {
-                searchInput.style.display = 'none';
+    const keywords = {
+        "devoluci": "devolucion", "devolver": "devolucion", "cambio": "devolucion",
+        "garant": "garantia", "autentic": "garantia", "original": "garantia",
+        "contact": "contacto", "email": "contacto", "tel": "contacto",
+        "cancelar": "cancelar", "anular": "cancelar",
+        "cuanto tarda": "tiempo_preventa", "tiempo": "tiempo_preventa", "cuando llega": "tiempo_preventa",
+        "distribuidor": "distribuidores", "oficial": "distribuidores",
+        "direcci": "direccion",
+        "env": "pedidos", "pedido": "pedidos", "entrega": "pedidos", "plazo": "pedidos",
+        "stock": "productos", "figura": "productos", "producto": "productos",
+        "preventa": "preventas", "reserva": "preventas", "lanzamiento": "preventas",
+        "pago": "faq", "factura": "faq", "tienda": "faq"
+    };
+
+    const chatToggle = document.getElementById('chatToggle');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+
+    chatToggle.addEventListener('click', () => {
+        chatWindow.classList.toggle('d-none');
+        chatToggle.querySelector('i').className = chatWindow.classList.contains('d-none')
+            ? 'bi bi-chat-dots-fill fs-4' : 'bi bi-x-lg fs-4';
+    });
+
+    chatClose.addEventListener('click', () => {
+        chatWindow.classList.add('d-none');
+        chatToggle.querySelector('i').className = 'bi bi-chat-dots-fill fs-4';
+    });
+
+    function botMessage(topic) {
+        const data = respuestas[topic] || respuestas.default;
+        const typing = document.createElement('div');
+        typing.className = 'chat-msg bot typing';
+        typing.innerHTML = '<span></span><span></span><span></span>';
+        chatMessages.appendChild(typing);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        setTimeout(() => {
+            typing.remove();
+            const msg = document.createElement('div');
+            msg.className = 'chat-msg bot';
+            msg.innerHTML = `<p>${data.texto}</p>`;
+            chatMessages.appendChild(msg);
+            if (data.opciones) {
+                const opts = document.createElement('div');
+                opts.className = 'chat-options';
+                data.opciones.forEach(op => {
+                    const btn = document.createElement('button');
+                    btn.className = 'chat-opt-btn';
+                    btn.textContent = op;
+                    btn.addEventListener('click', () => handleOption(op, opts));
+                    opts.appendChild(btn);
+                });
+                chatMessages.appendChild(opts);
             }
-        });
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 800);
+    }
 
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                searchInput.style.display = 'none';
-            }
-        });
+    function userMessage(text) {
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg user';
+        msg.innerHTML = `<p>${text}</p>`;
+        chatMessages.appendChild(msg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
 
-        // Mensaje de confirmación newsletter
-        const newsletterForm = document.getElementById('newsletter');
-        const newsletterOk = document.getElementById('newsletter-ok');
+    function handleOption(text, optsContainer) {
+        if (optsContainer) optsContainer.remove();
+        userMessage(text);
+        if (text === "Volver al menú") { setTimeout(() => showMenu(), 600); return; }
+        botMessage(detectTopic(text.toLowerCase()));
+    }
 
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            if (email) {
-                newsletterOk.classList.remove('d-none');
-                newsletterForm.reset();
-                setTimeout(() => {
-                    newsletterOk.classList.add('d-none');
-                }, 5000);
-            }
+    function detectTopic(text) {
+        for (const [key, topic] of Object.entries(keywords)) {
+            if (text.includes(key)) return topic;
+        }
+        return 'default';
+    }
+
+    function showMenu() {
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg bot';
+        msg.innerHTML = '<p>¿En qué más puedo ayudarte? 😊</p>';
+        chatMessages.appendChild(msg);
+        const opts = document.createElement('div');
+        opts.className = 'chat-options';
+        [
+            { label: "📦 Pedidos y envíos", topic: "pedidos" },
+            { label: "🗿 Productos y stock", topic: "productos" },
+            { label: "⭐ Preventas", topic: "preventas" },
+            { label: "❓ Preguntas frecuentes", topic: "faq" }
+        ].forEach(item => {
+            const btn = document.createElement('button');
+            btn.className = 'chat-opt-btn';
+            btn.textContent = item.label;
+            btn.addEventListener('click', () => { opts.remove(); userMessage(item.label); botMessage(item.topic); });
+            opts.appendChild(btn);
         });
+        chatMessages.appendChild(opts);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    document.querySelectorAll('#chatOptions .chat-opt-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const topic = btn.dataset.topic;
+            const label = btn.textContent;
+            document.getElementById('chatOptions').remove();
+            userMessage(label);
+            botMessage(topic);
+        });
+    });
+
+    function sendText() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+        chatInput.value = '';
+        userMessage(text);
+        botMessage(detectTopic(text.toLowerCase()));
+    }
+
+    chatSend.addEventListener('click', sendText);
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendText(); });
     </script>
-
 </body>
 </html>
