@@ -1,16 +1,61 @@
+<<<<<<< HEAD
 /* =============================================
    FRIKISTORE - style.css
    REGLA: Solo CSS que Bootstrap NO puede hacer.
    ============================================= */
 
 /* --- 1. VARIABLES --- */
+=======
+/* NOTAS DE BERTHA
+HAY propiedades de section 2 se pueden pasar a bootstrap */
+
+>>>>>>> ca4fff98e3602a68d2a735cf85ab4fe4ec34d434
 :root {
     --primary-color: #ffc107;
     --lego-red: #cc0000;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+<<<<<<< HEAD
 /* --- 2. BODY --- */
+=======
+/* 2. AJUSTES GENERALES */
+/* Estilo para las franjas amarillas bajo los títulos principales */
+.section-title,
+
+section h2 { 
+    display: table;
+    /* Hace que la línea mida lo mismo que el texto */
+    margin-left: auto;
+    /* Estas tres líneas centran el elemento */
+    margin-right: auto;
+    margin-bottom: 2rem;
+    /* Espacio con el contenido de abajo */
+    padding-bottom: 8px;
+    /* Espacio entre el texto y la franja */
+    border-bottom: 8px solid #ffc107;
+    /* Tu franja amarilla */
+    line-height: 1.2;
+}
+
+/* Ajuste específico para el título de Eventos y Testimonios (que no tiene .section-title) */
+#novedades h2 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 8px solid #ffc107;
+    padding-bottom: 8px;
+}
+
+/* Opcional: Si quieres que al pasar el ratón la línea brille un poco */
+.section-title:hover,
+section h2:hover {
+    border-bottom-color: #ffca2c;
+    /* Un amarillo un pelín más claro */
+    transition: border-color 0.3s ease;
+}
+
+>>>>>>> ca4fff98e3602a68d2a735cf85ab4fe4ec34d434
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -21,6 +66,11 @@ body {
 }
 
 .nav-link {
+<<<<<<< HEAD
+=======
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500;
+>>>>>>> ca4fff98e3602a68d2a735cf85ab4fe4ec34d434
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
@@ -54,6 +104,10 @@ body {
 .img-container {
     height: 250px;
     overflow: hidden;
+    position: relative;
+    height: 250px;
+    /* Altura fija para que todas las tarjetas sean iguales */
+    background-color: #eee;
 }
 
 .img-container img {
@@ -115,6 +169,7 @@ body {
 }
 
 @keyframes float {
+<<<<<<< HEAD
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-15px); }
 }
@@ -150,4 +205,17 @@ footer .bi:hover {
     height: 45px;
     min-width: 45px;
     font-size: 1.1rem;
+=======
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+>>>>>>> ca4fff98e3602a68d2a735cf85ab4fe4ec34d434
 }
