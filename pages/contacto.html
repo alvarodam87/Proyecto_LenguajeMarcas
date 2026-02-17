@@ -4,151 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | FrikiStore</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/style.css?v=3.0">
-    
+    <link rel="stylesheet" href="../css/style.css">
+
     <link rel="prefetch" href="catalogo.html">
     <link rel="prefetch" href="ropa.html">
     <link rel="prefetch" href="preventas.html">
     <link rel="prefetch" href="../index.html">
 </head>
-<body class="d-flex flex-column min-vh-100">
 
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="../index.html">FRIKISTORE</a>
-    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Figuras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ropa.html">Ropa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="preventas.html">Preventas</a></li>
-                    <li class="nav-item"><a class="nav-link active text-warning" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="catalogo.html">Figuras</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="ropa.html">Ropa</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="preventas.html">Preventas</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning text-uppercase" href="contacto.html">Contacto</a></li>
                 </ul>
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
-                    <button class="btn text-white position-relative" data-bs-toggle="offcanvas" data-bs-target="#carritoLateral">
+                    <button class="btn text-white position-relative" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#carritoLateral" aria-label="Abrir carrito">
                         <i class="bi bi-cart-fill fs-4"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                     </button>
-                    <button class="btn btn-outline-warning btn-sm rounded-pill px-4">Sign In</button>
+                    <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-4">
+                        <i class="bi bi-person me-1"></i> Sign In
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- ===================== MAIN ===================== -->
     <main class="py-5 flex-grow-1">
-        <section class="container bg-light p-5 rounded-4 shadow-sm">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-3 text-dark">¿Tienes alguna pregunta?</h1>
-                    <p class="lead text-muted">¡Contáctanos! Nuestro equipo de expertos en coleccionismo te responderá en menos de 24 horas.</p>
-                    <div class="mt-4">
-                        <p><i class="bi bi-geo-alt-fill text-warning me-2"></i> Calle Friki 123, Valencia</p>
-                        <p><i class="bi bi-envelope-fill text-warning me-2"></i> soporte@frikistore.es</p>
-                        <p><i class="bi bi-telephone-fill text-warning me-2"></i> +34 900 123 456</p>
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold">¿Tienes alguna <span class="text-warning">pregunta?</span></h1>
+                <p class="lead text-muted">Nuestro equipo de expertos en coleccionismo te responderá en menos de 24 horas.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Info de contacto -->
+                <div class="col-lg-5">
+                    <div class="bg-black text-white rounded-4 p-4 p-lg-5 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 class="fw-bold text-warning mb-4">Información de contacto</h2>
+                            <p class="text-secondary mb-4">Estamos aquí para ayudarte con tu colección. ¡No dudes en escribirnos!</p>
+
+                            <ul class="list-unstyled d-flex flex-column gap-4">
+                                <li class="d-flex align-items-center gap-3">
+                                    <span class="rounded-circle bg-warning d-flex align-items-center justify-content-center contact-icon">
+                                        <i class="bi bi-geo-alt-fill text-dark"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0 fw-bold small text-uppercase text-secondary">Dirección</p>
+                                        <p class="mb-0">Calle Friki 123, Valencia</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <span class="rounded-circle bg-warning d-flex align-items-center justify-content-center contact-icon">
+                                        <i class="bi bi-envelope-fill text-dark"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0 fw-bold small text-uppercase text-secondary">Email</p>
+                                        <a href="mailto:soporte@frikistore.es" class="text-white text-decoration-none">soporte@frikistore.es</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <span class="rounded-circle bg-warning d-flex align-items-center justify-content-center contact-icon">
+                                        <i class="bi bi-telephone-fill text-dark"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0 fw-bold small text-uppercase text-secondary">Teléfono</p>
+                                        <a href="tel:+34900123456" class="text-white text-decoration-none">+34 900 123 456</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <span class="rounded-circle bg-warning d-flex align-items-center justify-content-center contact-icon">
+                                        <i class="bi bi-clock-fill text-dark"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0 fw-bold small text-uppercase text-secondary">Horario</p>
+                                        <p class="mb-0">Lun - Vie: 9:00 - 20:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-5">
+                            <p class="fw-bold text-warning mb-3 text-uppercase small">Síguenos</p>
+                            <div class="d-flex gap-3 fs-4">
+                                <a href="#" class="text-white" aria-label="Síguenos en Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-white" aria-label="Síguenos en Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-white" aria-label="Síguenos en Twitter / X"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="text-white" aria-label="Síguenos en YouTube"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-6">
-                    <form class="p-4 bg-white rounded-3 shadow-sm border">
-                        <div class="mb-3">
-                            <label for="name" class="form-label fw-bold">Nombre</label>
-                            <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Tu nombre real o de héroe" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control border-0 bg-light" id="email" placeholder="nombre@ejemplo.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label fw-bold">Mensaje</label>
-                            <textarea class="form-control border-0 bg-light" id="message" rows="4" placeholder="¿En qué podemos ayudarte hoy?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow-sm">Enviar Mensaje</button>
-                    </form>
+
+                <!-- Formulario -->
+                <div class="col-lg-7">
+                    <div class="bg-white rounded-4 p-4 p-lg-5 h-100 shadow-sm">
+                        <h2 class="fw-bold mb-4">Envíanos un mensaje</h2>
+
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3 mb-3">
+                                <div class="col-sm-6">
+                                    <label for="name" class="form-label fw-bold">Nombre</label>
+                                    <input type="text" class="form-control bg-light border-0" id="name"
+                                        placeholder="Tu nombre real o de héroe" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="email" class="form-label fw-bold">Email</label>
+                                    <input type="email" class="form-control bg-light border-0" id="email"
+                                        placeholder="nombre@ejemplo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label fw-bold">Asunto</label>
+                                <select class="form-select bg-light border-0" id="subject" required>
+                                    <option value="" selected disabled>Selecciona un asunto...</option>
+                                    <option value="pedido">Consulta sobre pedido</option>
+                                    <option value="preventa">Información sobre preventas</option>
+                                    <option value="devolucion">Devoluciones y cambios</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-bold">Mensaje</label>
+                                <textarea class="form-control bg-light border-0" id="message" rows="5"
+                                    placeholder="¿En qué podemos ayudarte hoy?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-pill shadow-sm">
+                                <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+                            </button>
+
+                            <div id="form-ok" class="alert alert-success mt-3 d-none" role="alert">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                ¡Mensaje enviado! Te responderemos en menos de 24 horas. 🎉
+                            </div>
+                            <div id="form-error" class="alert alert-danger mt-3 d-none" role="alert">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                                Por favor, rellena todos los campos antes de enviar.
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
-        </section>
+        </div>
     </main>
 
-<footer class="bg-black text-white pt-5 pb-4 mt-auto">
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-black text-white pt-5 pb-4 mt-auto">
         <div class="container text-center text-md-start">
             <div class="row">
                 <div class="col-md-3 mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">FRIKISTORE</h5>
+                    <h5 class="text-warning fw-bold mb-4">FRIKISTORE</h5>
                     <p class="small">Tu tienda de confianza para coleccionismo y cultura geek. Importación directa.</p>
                 </div>
-
                 <div class="col-md-3 mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Ayuda</h5>
-                    <p class="mb-2"><a href="#" class="text-white text-decoration-none">Soporte</a></p>
-                    <p class="mb-2"><a href="#" class="text-white text-decoration-none">Envíos</a></p>
-                    <p class="mb-0"><a href="#" class="text-white text-decoration-none">FAQ</a></p>
+                    <h5 class="text-warning fw-bold mb-4">Ayuda</h5>
+                    <p class="mb-2"><a href="#" class="text-white text-decoration-none small">Soporte</a></p>
+                    <p class="mb-2"><a href="#" class="text-white text-decoration-none small">Envíos</a></p>
+                    <p class="mb-0"><a href="#" class="text-white text-decoration-none small">FAQ</a></p>
                 </div>
-
                 <div class="col-md-3 mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Síguenos</h5>
+                    <h5 class="text-warning fw-bold mb-4">Síguenos</h5>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
-                        <a href="#" class="text-white" title="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-white" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white" aria-label="Síguenos en Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white" aria-label="Síguenos en Twitter / X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white" aria-label="Síguenos en Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Síguenos en YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-
                 <div class="col-md-3 mt-3">
                     <h5 class="text-warning fw-bold mb-4">Métodos de pago</h5>
                     <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start fs-3">
-                        <i class="fab fa-cc-visa text-white"></i>
-                        <i class="fab fa-cc-mastercard text-white"></i>
-                        <i class="fab fa-cc-paypal text-white"></i>
-                        <i class="fab fa-cc-amex text-white"></i>
+                        <i class="fab fa-cc-visa text-white" aria-label="Visa"></i>
+                        <i class="fab fa-cc-mastercard text-white" aria-label="Mastercard"></i>
+                        <i class="fab fa-cc-paypal text-white" aria-label="PayPal"></i>
+                        <i class="fab fa-cc-amex text-white" aria-label="American Express"></i>
                     </div>
                 </div>
             </div>
-            
             <hr class="mt-5 mb-4 border-secondary border-opacity-50">
-            
-            <div class="text-center text-secondary pb-2 small">
+            <div class="text-center text-secondary small">
                 © 2026 Frikistore Team | Trabajo Colaborativo (Izan, Luis, Alvaro)
             </div>
         </div>
     </footer>
 
+    <!-- ===================== CARRITO LATERAL ===================== -->
     <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="carritoLateral" aria-labelledby="carritoLabel">
         <div class="offcanvas-header border-bottom border-secondary">
-            <h5 class="offcanvas-title fw-bold text-warning" id="carritoLabel">MI CARRITO NAKAMA</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title fw-bold text-warning" id="carritoLabel">
+                <i class="bi bi-cart-fill me-2"></i>MI CARRITO NAKAMA
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
         </div>
-        <div class="offcanvas-body">
-            <p class="text-center text-muted mt-5">Tu carrito está vacío... ¡de momento!</p>
+        <div class="offcanvas-body text-center text-secondary mt-5">
+            <i class="bi bi-cart-x fs-1 d-block mb-3"></i>
+            <p>Tu carrito está vacío.<br>¡Añade alguna figura desde el catálogo!</p>
+            <a href="catalogo.html" class="btn btn-warning btn-sm rounded-pill px-4 mt-2 fw-bold">Ver catálogo</a>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-    // Prefetch on hover
-    (function(){
-      document.querySelectorAll('.navbar a.nav-link').forEach(function(a){
-        a.addEventListener('pointerenter', function(){
-          var href = a.getAttribute('href');
-          if(!href || href==='#') return;
-          var exists = Array.from(document.getElementsByTagName('link')).some(function(l){return l.rel==='prefetch' && l.href.indexOf(href)!==-1});
-          if(!exists){
-             var l = document.createElement('link');
-             l.rel='prefetch'; l.href = href; document.head.appendChild(l);
-          }
-        }, {once:true});
-      });
-    })();
+        // Formulario con validación
+        const contactForm = document.getElementById('contactForm');
+        const formOk = document.getElementById('form-ok');
+        const formError = document.getElementById('form-error');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            formOk.classList.add('d-none');
+            formError.classList.add('d-none');
+
+            if (!name || !email || !subject || !message) {
+                formError.classList.remove('d-none');
+                return;
+            }
+
+            formOk.classList.remove('d-none');
+            contactForm.reset();
+            setTimeout(() => formOk.classList.add('d-none'), 5000);
+        });
+
+        // Prefetch on hover
+        document.querySelectorAll('.navbar a.nav-link').forEach(a => {
+            a.addEventListener('pointerenter', () => {
+                const href = a.getAttribute('href');
+                if (!href || href === '#') return;
+                const exists = Array.from(document.getElementsByTagName('link'))
+                    .some(l => l.rel === 'prefetch' && l.href.includes(href));
+                if (!exists) {
+                    const l = document.createElement('link');
+                    l.rel = 'prefetch';
+                    l.href = href;
+                    document.head.appendChild(l);
+                }
+            }, { once: true });
+        });
     </script>
 </body>
 </html>
