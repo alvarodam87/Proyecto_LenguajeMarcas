@@ -1,30 +1,23 @@
+
 /* =============================================
-   FRIKISTORE - style.css
-   REGLA: Solo CSS que Bootstrap NO puede hacer.
+   FRIKISTORE - style.css (OPTIMIZADO BOOTSTRAP 5)
    ============================================= */
 
 /* --- 1. VARIABLES --- */
 :root {
-    --primary-color: #ffc107; /* Amarillo de Bootstrap */
+    --primary-color: #ffc107; 
     --lego-red: #cc0000;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* --- 2. BODY --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* --- 3. NAVBAR --- */
+/* --- 2. NAVBAR Y TÍTULOS --- */
 .navbar {
     border-bottom: 3px solid var(--primary-color);
 }
 
 .nav-link {
-    text-transform: uppercase;
-    font-size: 0.85rem;
     letter-spacing: 1px;
-    transition: var(--transition); /* Añadido para el hover de los enlaces */
+    transition: var(--transition);
 }
 
 .nav-link:hover {
@@ -32,24 +25,20 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- 4. TÍTULOS --- */
 .section-title {
     display: table;
-    margin: 0 auto 2.5rem auto;
-    padding-bottom: 10px;
     border-bottom: 8px solid var(--primary-color);
     letter-spacing: 1px;
+    /* Los márgenes y alineaciones ahora se controlan en el HTML (mx-auto, mb-4) */
 }
 
-/* --- 5. EFECTOS GENERALES DE TARJETAS (iluminación y hover) --- */
-/* Unificación para el brillo amarillo y el hover */
+/* --- 3. EFECTOS HOVER Y TARJETAS --- */
 .product-card, 
 .image-card, 
 .licencia-card,
-#newsCarousel { /* Si tienes un carrusel de noticias, también se ilumina */
+#newsCarousel {
     transition: var(--transition);
     border: 2px solid transparent !important;
-    overflow: hidden; /* Asegura que la imagen no se desborde al escalar */
 }
 
 .product-card:hover, 
@@ -57,149 +46,59 @@ body {
 .licencia-card:hover,
 #newsCarousel:hover {
     border: 2px solid var(--primary-color) !important;
-    box-shadow: 0 0 30px rgba(255, 193, 7, 0.7) !important; /* Brillo más intenso */
-    transform: translateY(-5px); /* Pequeño levantamiento */
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.7) !important; 
+    transform: translateY(-5px); 
 }
 
-/* --- 6. EFECTO DE IMAGEN EN TARJETAS (giro y zoom) --- */
-/* Para la imagen del Hero y otras tarjetas que quieras que giren */
+/* Rotación y zoom de imágenes */
 .image-card img, 
-.catalog-img, /* Las imágenes del catálogo */
-.licencia-img /* Las imágenes de las tarjetas de licencia */
-{
+.card-img-top, 
+.catalog-img, 
+.licencia-img {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.image-card:hover img {
-    transform: scale(1.05) rotate(2deg); /* Gira 2 grados a la derecha y crece un 5% */
+.image-card:hover img { transform: scale(1.05) rotate(2deg); }
+.product-card:hover .card-img-top, .product-card:hover .catalog-img { transform: scale(1.1) rotate(-2deg); }
+.licencia-card:hover .licencia-img { transform: scale(1.15) rotate(3deg); }
+
+/* --- 4. UTILIDADES CUSTOM --- */
+.cursor-pointer { cursor: pointer; }
+
+.hero-bg {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f0f0f0 100%);
 }
 
-/* Efecto para las imágenes del catálogo/productos (diferente al hero) */
-.product-card:hover .catalog-img {
-    transform: scale(1.1) rotate(-2deg); /* 10% más grande y giro a la izquierda */
-}
-/* Efecto para las imágenes de las tarjetas de licencia */
-.licencia-card:hover .licencia-img {
-    transform: scale(1.15) rotate(3deg); /* 15% más grande y 3 grados de giro */
-}
-
-
-/* --- 7. TAMAÑO FIJO DE IMAGENES DEL CATÁLOGO --- */
-/* Contenedor fijo para imágenes en las páginas de catálogo y ropa */
-.catalog-img-box {
-    height: 250px; /* Altura fija para todas las imágenes */
-    padding: 1rem; /* Espacio interno para que la imagen no toque los bordes */
-    display: flex; /* Para centrar la imagen */
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    overflow: hidden; /* Muy importante para que no se vea el exceso de imagen al escalar */
-    background-color: #fff; /* Fondo blanco por si la imagen tiene transparencia */
-}
-
-.catalog-img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ajusta la imagen sin recortarla, manteniendo proporciones */
-    /* object-fit: cover; // Usa 'cover' si quieres que siempre rellene el espacio y no te importa recortar */
-    transition: var(--transition);
-}
-
-
-/* --- 8. CTA CARD (Ejemplo si tuvieras una tarjeta de llamada a la acción) --- */
-/* Este estilo es de un ejemplo anterior, si no tienes una .cta-card puedes eliminarlo */
-.cta-card {
-    background: url('../img/fondocta2.png') center/cover no-repeat;
-    border: 8px solid var(--lego-red);
-    box-shadow: 10px 10px 0px #333;
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-15px); }
-}
-
-/* --- 9. BTN LEGO (Ejemplo si tuvieras un botón especial) --- */
-/* Este estilo es de un ejemplo anterior, si no tienes un .btn-lego puedes eliminarlo */
-.btn-lego {
-    background-color: var(--lego-red);
-    border: 4px solid #333;
-    box-shadow: 4px 4px 0px #333;
-    transition: 0.2s;
-}
-
-.btn-lego:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #333;
-    background-color: #ff0000;
-}
-
-/* --- 10. FOOTER (Iconos de pago) --- */
-.payment-icons i {
-    transition: var(--transition);
-}
-
+.payment-icons i { transition: var(--transition); }
 .payment-icons i:hover {
     color: var(--primary-color);
     transform: translateY(-5px);
 }
 
-.cursor-pointer { cursor: pointer; }
-
-
-/* --- 11. HERO fondo gradiente (si usas un fondo degradado en el hero) --- */
-.hero-bg {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f0f0f0 100%);
+/* CTA de Fondo Lego */
+.cta-card {
+    background: url('../img/fondocta2.png') center/cover no-repeat;
+    border: 4px solid #000; /* Borde estilo cómic */
+    animation: float 3s ease-in-out infinite;
 }
 
-/* --- 12. BUSCADOR NAVBAR (input y span) --- */
-.search-input {
-    transition: var(--transition);
-    /* Ya tiene border-radius en el HTML con style="border-radius: ..." */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.search-input::placeholder {
-    color: #aaa;
-}
-
-/* --- 13. CONTACTO - Iconos circulares amarillos (si los usas) --- */
-.contact-icon {
-    width: 45px;
-    height: 45px;
-    min-width: 45px; /* Para que no se encoja */
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: #000;
-    transition: var(--transition);
-}
-.contact-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
-}
-
-
-/* --- 14. CHATBOT FLOTANTE --- */
+/* --- 5. CHATBOT FLOTANTE (Medidas específicas no nativas) --- */
 .chat-toggle-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     background-color: var(--primary-color);
     border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     cursor: pointer;
-    z-index: 1050; /* Por encima de todo */
+    z-index: 1050; 
     transition: var(--transition);
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .chat-toggle-btn:hover {
@@ -209,23 +108,11 @@ body {
 
 .chat-window {
     position: fixed;
-    bottom: 100px; /* Encima del botón */
+    bottom: 100px; 
     right: 30px;
     width: 340px;
     max-height: 480px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     z-index: 1049;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.chat-header {
-    background: #000;
-    color: #fff;
-    border-radius: 16px 16px 0 0;
 }
 
 .chat-avatar {
@@ -235,52 +122,23 @@ body {
 }
 
 .chat-messages {
-    flex: 1; /* Ocupa el espacio restante */
-    overflow-y: auto; /* Scroll si hay muchos mensajes */
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: #f8f9fa;
+    flex: 1; 
+    overflow-y: auto; 
 }
-
-.chat-msg {
-    max-width: 85%;
-    padding: 0.6rem 0.9rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    line-height: 1.4;
-}
-
-.chat-msg p { margin: 0; } /* Quita el margen inferior de los párrafos dentro del mensaje */
 
 .chat-msg.bot {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    align-self: flex-start;
-    border-radius: 4px 12px 12px 12px; /* Esquina superior izquierda recta */
+    border-radius: 4px 12px 12px 12px; 
 }
 
 .chat-msg.user {
     background: var(--primary-color);
-    color: #000;
-    align-self: flex-end;
-    border-radius: 12px 4px 12px 12px; /* Esquina superior derecha recta */
-    font-weight: 600;
-}
-
-.chat-msg.typing {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    padding: 0.8rem;
+    border-radius: 12px 4px 12px 12px; 
 }
 
 .chat-msg.typing span {
     width: 8px;
     height: 8px;
     background: #aaa;
-    border-radius: 50%;
     animation: typing-bounce 1s infinite;
 }
 
@@ -292,39 +150,18 @@ body {
     50% { transform: translateY(-5px); }
 }
 
-.chat-options {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    align-self: flex-start;
-    width: 100%;
-}
-
 .chat-opt-btn {
-    background: #fff;
     border: 1.5px solid var(--primary-color);
-    border-radius: 20px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-    cursor: pointer;
-    text-align: left;
     transition: var(--transition);
-    color: #000;
 }
 
 .chat-opt-btn:hover {
     background: var(--primary-color);
-    font-weight: 600;
 }
 
-.chat-input-area {
-    background: #fff;
-}
-
-/* Media Queries para Responsive del Chatbot */
 @media (max-width: 480px) {
     .chat-window {
-        width: calc(100vw - 20px); /* Ocupa casi todo el ancho */
+        width: calc(100vw - 20px); 
         right: 10px;
         bottom: 90px;
     }

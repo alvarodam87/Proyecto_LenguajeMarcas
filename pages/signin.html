@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | FrikiStore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css?v=4.0">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../index.html">
+                <span class="fs-4">🎮</span>
+                <span class="text-warning">FRIKISTORE</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="../index.html"><i class="bi bi-house me-1"></i>Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="catalogo.html"><i class="bi bi-box-seam me-1"></i>Figuras</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="ropa.html"><i class="bi bi-bag me-1"></i>Ropa</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="preventas.html"><i class="bi bi-star me-1"></i>Preventas</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="contacto.html"><i class="bi bi-chat-dots me-1"></i>Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="card border-0 shadow-lg overflow-hidden rounded-4 mx-auto" style="max-width: 900px;">
+                <div class="row g-0">
+                    
+                    <div class="col-md-6 d-none d-md-block bg-black position-relative">
+                        <img src="../img/fondoMarvel.jpg" alt="Fondo FrikiStore" class="img-fluid h-100 w-100" style="object-fit: cover; opacity: 0.6;">
+                        <div class="position-absolute top-50 start-50 translate-middle text-center w-100 px-4">
+                            <h2 class="text-white fw-bold mb-3">¡Únete a la tripulación!</h2>
+                            <p class="text-light">Guarda tus favoritos, gestiona tus preventas y obtén descuentos exclusivos para nakamas.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 bg-dark text-white p-4 p-lg-5">
+                        
+                        <ul class="nav nav-pills nav-justified mb-4 gap-2" id="loginTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active rounded-pill fw-bold text-dark bg-warning" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Iniciar Sesión</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill fw-bold text-white border border-secondary" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Crear Cuenta</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="loginTabsContent">
+                            
+                            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <div class="text-center mb-4">
+                                    <h3 class="fw-bold">Bienvenido de nuevo</h3>
+                                    <p class="text-secondary small">Introduce tus datos para acceder</p>
+                                </div>
+                                <form id="formLogin">
+                                    <div class="mb-3">
+                                        <label for="loginEmail" class="form-label small text-secondary fw-bold">Email</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-0"><i class="bi bi-envelope text-muted"></i></span>
+                                            <input type="email" class="form-control bg-light border-0 py-2" id="loginEmail" placeholder="tu@email.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label small text-secondary fw-bold">Contraseña</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-0"><i class="bi bi-lock text-muted"></i></span>
+                                            <input type="password" class="form-control bg-light border-0 py-2" id="loginPassword" placeholder="••••••••" required>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4 small">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-warning" type="checkbox" id="rememberMe">
+                                            <label class="form-check-label text-secondary" for="rememberMe">Recuérdame</label>
+                                        </div>
+                                        <a href="#" class="text-warning text-decoration-none hover-warning">¿Olvidaste tu contraseña?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold py-2 mb-3 btn-hover-lift">ENTRAR</button>
+                                    
+                                    <div class="position-relative text-center my-4">
+                                        <hr class="border-secondary">
+                                        <span class="position-absolute top-50 start-50 translate-middle bg-dark px-2 text-secondary small">O entra con</span>
+                                    </div>
+                                    
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="btn btn-outline-light w-50 rounded-pill d-flex align-items-center justify-content-center gap-2">
+                                            <i class="bi bi-google text-danger"></i> Google
+                                        </button>
+                                        <button type="button" class="btn btn-outline-light w-50 rounded-pill d-flex align-items-center justify-content-center gap-2">
+                                            <i class="bi bi-discord text-primary"></i> Discord
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <div class="text-center mb-4">
+                                    <h3 class="fw-bold">Nuevo Nakama</h3>
+                                    <p class="text-secondary small">Rellena los datos para crear tu cuenta</p>
+                                </div>
+                                <form id="formRegister">
+                                    <div class="mb-3">
+                                        <label for="regName" class="form-label small text-secondary fw-bold">Nombre o Nickname</label>
+                                        <input type="text" class="form-control bg-light border-0 py-2 rounded-3" id="regName" placeholder="Ej: Zoro99" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="regEmail" class="form-label small text-secondary fw-bold">Email</label>
+                                        <input type="email" class="form-control bg-light border-0 py-2 rounded-3" id="regEmail" placeholder="tu@email.com" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="regPassword" class="form-label small text-secondary fw-bold">Contraseña</label>
+                                        <input type="password" class="form-control bg-light border-0 py-2 rounded-3" id="regPassword" placeholder="Mínimo 8 caracteres" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold py-2 btn-hover-lift">CREAR CUENTA</button>
+                                    <p class="text-center text-secondary small mt-3">Al registrarte, aceptas nuestras <a href="#" class="text-warning text-decoration-none">Políticas de Privacidad</a>.</p>
+                                </form>
+                            </div>
+
+                        </div> </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white pt-5 pb-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-3 mt-3">
+                    <h5 class="text-warning fw-bold mb-4">FRIKISTORE</h5>
+                    <p class="small text-secondary">Tu tienda de confianza para coleccionismo y cultura geek. Importación directa.</p>
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="text-warning fw-bold mb-4">Ayuda</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="contacto.html" class="text-secondary text-decoration-none small hover-warning">Soporte</a>
+                        <a href="#" class="text-secondary text-decoration-none small hover-warning">Envíos y Devoluciones</a>
+                        <a href="#" class="text-secondary text-decoration-none small hover-warning">Preguntas Frecuentes</a>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="text-warning fw-bold mb-4">Síguenos</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                        <a href="#" class="text-secondary hover-warning transition-transform" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary hover-warning transition-transform" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary hover-warning transition-transform" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary hover-warning transition-transform" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="text-warning fw-bold mb-4">Métodos de pago</h5>
+                    <div class="payment-icons d-flex gap-3 flex-wrap justify-content-center justify-content-md-start fs-3 text-secondary">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary border-opacity-25">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+                <p class="mb-2 mb-md-0">© 2026 Frikistore Team | Luis, Izan, Alvaro.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-secondary text-decoration-none">Aviso Legal</a>
+                    <a href="#" class="text-secondary text-decoration-none">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Funcionalidad visual para los botones de las pestañas
+        const loginTab = document.getElementById('login-tab');
+        const registerTab = document.getElementById('register-tab');
+
+        // Al hacer clic en Iniciar Sesión
+        loginTab.addEventListener('click', function() {
+            loginTab.classList.add('bg-warning', 'text-dark');
+            loginTab.classList.remove('text-white', 'border', 'border-secondary');
+            
+            registerTab.classList.remove('bg-warning', 'text-dark');
+            registerTab.classList.add('text-white', 'border', 'border-secondary');
+        });
+
+        // Al hacer clic en Crear Cuenta
+        registerTab.addEventListener('click', function() {
+            registerTab.classList.add('bg-warning', 'text-dark');
+            registerTab.classList.remove('text-white', 'border', 'border-secondary');
+            
+            loginTab.classList.remove('bg-warning', 'text-dark');
+            loginTab.classList.add('text-white', 'border', 'border-secondary');
+        });
+
+        // Simulación de envío de formularios
+        document.getElementById('formLogin').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Cargando...';
+            setTimeout(() => {
+                window.location.href = '../index.html'; // Redirige al index tras "logearse"
+            }, 1000);
+        });
+
+        document.getElementById('formRegister').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>¡Cuenta Creada!';
+            btn.classList.replace('btn-warning', 'btn-success');
+            setTimeout(() => {
+                loginTab.click(); // Vuelve a la pestaña de login
+                btn.innerHTML = 'CREAR CUENTA';
+                btn.classList.replace('btn-success', 'btn-warning');
+                this.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
