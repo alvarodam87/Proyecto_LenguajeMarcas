@@ -1,4 +1,4 @@
-const CACHE_NAME = 'frikistore-v2.2.2';
+const CACHE_NAME = 'frikistore-v2.2.3';
 const urlsToCache = [
   'index.html',
   'pages/catalogo.html',
